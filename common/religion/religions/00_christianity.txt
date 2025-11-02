@@ -1144,7 +1144,7 @@
 		universal_church = {
 			color = { 0.9 0.9 0.9 }
 			icon = catholic
-            religious_head = k_apostolic_see
+			religious_head = k_apostolic_see
 			graphical_faith = "catholic_gfx"
 			
 			
@@ -1161,6 +1161,9 @@
 			doctrine = tenet_communion
 			doctrine = tenet_pentarchy
 			doctrine = tenet_monasticism
+
+			#Coronation tradition
+			doctrine = doctrine_anointment_permitted	
 
 			localization = { # Utilizes the 'West Christian' Saints, shared by Catholics and Orthodox
 				#FertilityGod
@@ -1209,8 +1212,6 @@
 				ReligiousHeadName = universal_church_religious_head_title
 				ReligiousHeadTitleName = universal_church_religious_head_title
 
-				#Coronation tradition
-				doctrine = doctrine_anointment_permitted				
 			}	
         }
 	}
