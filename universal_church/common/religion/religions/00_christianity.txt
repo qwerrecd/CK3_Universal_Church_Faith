@@ -245,74 +245,6 @@ christianity_religion = {
 	piety_icon_group = "christian"
 
 	faiths = {
-        universal_church = {
-            color = { 0.9 0.9 0.9 }
-            icon = catholic
-			religious_head = k_apostolic_see
-            graphical_faith = "catholic_gfx"
-
-            holy_site = jerusalem
-			holy_site = constantinople
-			holy_site = rome
-			holy_site = alexandria
-			holy_site = antioch
-
-			#Special Tolerance
-			doctrine = special_doctrine_ecumenical_christian
-
-			#Tenets
-			doctrine = tenet_communion
-			doctrine = tenet_pentarchy
-			doctrine = tenet_monasticism
-
-            localization = { # Utilizes the 'West Christian' Saints, shared by Catholics and Orthodox
-				#FertilityGod
-				FertilityGodName = west_christian_fertility_god_name
-				FertilityGodNamePossessive = west_christian_fertility_god_name_possessive
-				FertilityGodSheHe = CHARACTER_SHEHE_SHE
-				FertilityGodHerHis = CHARACTER_HERHIS_HER
-				FertilityGodHerHim = CHARACTER_HERHIM_HER
-
-				#WealthGod
-				WealthGodName = west_christian_wealth_god_name
-				WealthGodNamePossessive = west_christian_wealth_god_name_possessive
-				WealthGodSheHe = CHARACTER_SHEHE_HE
-				WealthGodHerHis = CHARACTER_HERHIS_HIS
-				WealthGodHerHim = CHARACTER_HERHIM_HIM
-
-				#HouseholdGod
-				HouseholdGodName = west_christian_household_god_name
-				HouseholdGodNamePossessive = west_christian_household_god_name_possessive
-				HouseholdGodSheHe = CHARACTER_SHEHE_HE
-				HouseholdGodHerHis = CHARACTER_HERHIS_HIS
-				HouseholdGodHerHim = CHARACTER_HERHIM_HIM
-
-				#KnowledgeGod
-				KnowledgeGodName = west_christian_knowledge_god_name
-				KnowledgeGodNamePossessive = west_christian_knowledge_god_name_possessive
-				KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
-				KnowledgeGodHerHis = CHARACTER_HERHIS_HER
-				KnowledgeGodHerHim = CHARACTER_HERHIM_HER
-
-				#WarGod
-				WarGodName = west_christian_war_god_name
-				WarGodNamePossessive = west_christian_war_god_name_possessive
-				WarGodSheHe = CHARACTER_SHEHE_HE
-				WarGodHerHis = CHARACTER_HERHIS_HIS
-				WarGodHerHim = CHARACTER_HERHIM_HIM
-
-				#WaterGod
-				WaterGodName = west_christian_water_god_name
-				WaterGodNamePossessive = west_christian_water_god_name_possessive
-				WaterGodSheHe = CHARACTER_SHEHE_HE
-				WaterGodHerHis = CHARACTER_HERHIS_HIS
-				WaterGodHerHim = CHARACTER_HERHIM_HIM
-
-				# Apostle
-				ReligiousHeadName = universal_church_religious_head_title
-				ReligiousHeadTitleName = universal_church_religious_head_title				
-			}	
-        }
 		catholic = {
 			color = { 0.8 0.8 0.6 }
 			religious_head = k_papal_state
@@ -1208,5 +1140,78 @@ christianity_religion = {
 				ReligiousHeadTitleName = adoptionist_religious_head_title_name
 			}
 		}
+
+		universal_church = {
+			color = { 0.9 0.9 0.9 }
+			icon = catholic
+            religious_head = k_apostolic_see
+			graphical_faith = "catholic_gfx"
+			
+			
+			holy_site = jerusalem
+			holy_site = constantinople
+			holy_site = rome
+			holy_site = alexandria
+			holy_site = antioch
+
+			#Special Tolerance
+			doctrine = special_doctrine_ecumenical_christian
+
+			#Tenets
+			doctrine = tenet_communion
+			doctrine = tenet_pentarchy
+			doctrine = tenet_monasticism
+
+			localization = { # Utilizes the 'West Christian' Saints, shared by Catholics and Orthodox
+				#FertilityGod
+				FertilityGodName = west_christian_fertility_god_name
+				FertilityGodNamePossessive = west_christian_fertility_god_name_possessive
+				FertilityGodSheHe = CHARACTER_SHEHE_SHE
+				FertilityGodHerHis = CHARACTER_HERHIS_HER
+				FertilityGodHerHim = CHARACTER_HERHIM_HER
+
+				#WealthGod
+				WealthGodName = west_christian_wealth_god_name
+				WealthGodNamePossessive = west_christian_wealth_god_name_possessive
+				WealthGodSheHe = CHARACTER_SHEHE_HE
+				WealthGodHerHis = CHARACTER_HERHIS_HIS
+				WealthGodHerHim = CHARACTER_HERHIM_HIM
+
+				#HouseholdGod
+				HouseholdGodName = west_christian_household_god_name
+				HouseholdGodNamePossessive = west_christian_household_god_name_possessive
+				HouseholdGodSheHe = CHARACTER_SHEHE_HE
+				HouseholdGodHerHis = CHARACTER_HERHIS_HIS
+				HouseholdGodHerHim = CHARACTER_HERHIM_HIM
+
+				#KnowledgeGod
+				KnowledgeGodName = west_christian_knowledge_god_name
+				KnowledgeGodNamePossessive = west_christian_knowledge_god_name_possessive
+				KnowledgeGodSheHe = CHARACTER_SHEHE_SHE
+				KnowledgeGodHerHis = CHARACTER_HERHIS_HER
+				KnowledgeGodHerHim = CHARACTER_HERHIM_HER
+
+				#WarGod
+				WarGodName = west_christian_war_god_name
+				WarGodNamePossessive = west_christian_war_god_name_possessive
+				WarGodSheHe = CHARACTER_SHEHE_HE
+				WarGodHerHis = CHARACTER_HERHIS_HIS
+				WarGodHerHim = CHARACTER_HERHIM_HIM
+
+				#WaterGod
+				WaterGodName = west_christian_water_god_name
+				WaterGodNamePossessive = west_christian_water_god_name_possessive
+				WaterGodSheHe = CHARACTER_SHEHE_HE
+				WaterGodHerHis = CHARACTER_HERHIS_HIS
+				WaterGodHerHim = CHARACTER_HERHIM_HIM
+
+				# Apostle
+				ReligiousHeadName = universal_church_religious_head_title
+				ReligiousHeadTitleName = universal_church_religious_head_title
+
+				#Coronation tradition
+				doctrine = doctrine_anointment_permitted				
+			}	
+        }
 	}
 }
