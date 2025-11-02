@@ -3,6 +3,6 @@ tags={
 	"1.18 'Crane'"
 	"Religion"
 }
-name="Nicene Christianity"
+name="Universal Church"
 supported_version="1.18.*"
 remote_file_id="3598014549"
