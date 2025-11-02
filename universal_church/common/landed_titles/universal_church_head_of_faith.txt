@@ -1,4 +1,4 @@
-k_apostolic_see = {
+﻿k_apostolic_see = {
     color = { 0.7 0.7 0.7 }
     tier = kingdom
     definite_form = yes
@@ -6,7 +6,7 @@ k_apostolic_see = {
 	can_use_nomadic_naming = no
     landless = yes    
     
-    capital = c_nikaea
+    capital = c_jerusalem
                     
     religious_head = yes              
     creation_requires_capital = no     
