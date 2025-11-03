@@ -1,5 +1,5 @@
 ﻿hold_ecumenical_council_scripted_effect = {
-	every_player = { #Notify members of other ecumenical Christian branches that the council has come to an agreement.
+	every_ruler = { #Notify members of other ecumenical Christian branches that the council has come to an agreement.
 		limit = {
 			faith.religion = root.faith.religion
 			faith != root.faith
@@ -11,7 +11,7 @@
 		}
 		trigger_event = ecumenical_council.0002
 	}
-    every_player = { #Notify members of other Christian branches that they need to get on board or get run over.
+    every_ruler = { #Notify members of other Christian branches that they need to get on board or get run over.
 		limit = {
 			faith.religion = root.faith.religion
 			faith != root.faith

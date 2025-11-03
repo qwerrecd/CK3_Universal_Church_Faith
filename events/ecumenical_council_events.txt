@@ -60,9 +60,9 @@ ecumenical_council.0002 = {
             set_county_faith = faith:universal_church
         }
 		ai_chance = {
-            base = 80
+            base = 90
             modifier = {
-                add = 20
+                add = 10
                 has_trait = cynical
             }
         }
@@ -115,7 +115,7 @@ ecumenical_council.0003 = {
 		ai_chance = {
 			base = 60
 			modifier = { 
-                add = 25 
+                add = 30
                 has_trait = cynical
             }
 			modifier = {
