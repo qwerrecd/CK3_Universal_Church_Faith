@@ -5,6 +5,52 @@ ecumenical_council.0001 = {
 	type = character_event
 	title = ecumenical_council.0001.t
 	desc = ecumenical_council.0001.desc
+	left_portrait = {
+        character = scope:council_host
+        animation = personality_zealous
+    }
+	right_portrait = {
+		character = title:k_papal_state.holder
+		animation = personality_zealous
+	}
+	theme = realm
+
+	immediate = {
+		save_scope_as = council_host
+	}
+
+	option = {
+		name = ecumenical_council.0001.a
+		ai_chance = {
+            base = 50
+        }
+		faith:universal_church = {
+			add_doctrine = tenet_mendicant_preachers
+		}
+		trigger_event = {
+			id = ecumenical_council.0002
+			days = 7
+		}
+	}
+	option = {
+		name = ecumenical_council.0001.b
+		ai_chance = {
+			base = 50
+		}
+		faith:universal_church = {
+			add_doctrine = tenet_armed_pilgrimages
+		}
+		trigger_event = {
+			id = ecumenical_council.0002
+			days = 7
+		}
+	}
+}
+
+ecumenical_council.0002 = {
+	type = character_event
+	title = ecumenical_council.0002.t
+	desc = ecumenical_council.0002.desc
 	theme = realm
 	left_portrait = {
 		character = root
@@ -13,13 +59,10 @@ ecumenical_council.0001 = {
 
 	immediate = {
 		play_music_cue = "mx_cue_faith_conversion"
-		save_scope_as = council_host
 	}
 
 	option = {
-		name = ecumenical_council.0001.a
-		custom_tooltip = ecumenical_council.0001.a.tt
-
+		name = ecumenical_council.0002.a
 		set_character_faith = faith:universal_church
 		every_held_title = {
 			title_tier = county
@@ -29,23 +72,18 @@ ecumenical_council.0001 = {
 	}
 }
 
-ecumenical_council.0002 = {
+ecumenical_council.0003 = {
 	type = character_event
-	title = ecumenical_council.0002.t
-	desc = ecumenical_council.0002.desc
+	title = ecumenical_council.0003.t
+	desc = ecumenical_council.0003.desc
 	left_portrait = {
         character = scope:council_host
         animation = personality_zealous
     }
 	theme = realm
-	immediate = {
-        faith = {
-            save_scope_as = old_faith
-        }
-    }
 
 	option = {
-		name = ecumenical_council.0002.a
+		name = ecumenical_council.0003.a
 		trigger = {
             OR = {
                 is_ai = no
@@ -61,16 +99,6 @@ ecumenical_council.0002 = {
         }
 		ai_chance = {
             base = 85
-			modifier = {
-				same_dynasty = yes
-				add = 15
-			}
-			modifier = {
-				add = 15
-				any_title = {
-					has_title = title:c_jerusalem
-				}
-			}
             modifier = {
                 add = 20
                 has_trait = cynical
@@ -90,7 +118,7 @@ ecumenical_council.0002 = {
         }
 	}
 	option = {
-		name = ecumenical_council.0002.b
+		name = ecumenical_council.0003.b
 		ai_chance = {
 			base = 15
 			ai_value_modifier = {
@@ -104,23 +132,18 @@ ecumenical_council.0002 = {
 	}
 }
 
-ecumenical_council.0003 = {
+ecumenical_council.0004 = {
 	type = character_event
-	title = ecumenical_council.0003.t
-	desc = ecumenical_council.0003.desc
+	title = ecumenical_council.0004.t
+	desc = ecumenical_council.0004.desc
 	left_portrait = {
         character = scope:council_host
         animation = personality_zealous
     }
 	theme = realm
-	immediate = {
-        faith = {
-            save_scope_as = old_faith
-        }
-    }
 
 	option = {
-		name = ecumenical_council.0003.a
+		name = ecumenical_council.0004.a
 		trigger = {
             OR = {
                 is_ai = no
@@ -141,16 +164,6 @@ ecumenical_council.0003 = {
                 has_trait = cynical
             }
 			modifier = {
-				add = 15
-				any_title = {
-					has_title = title:c_jerusalem
-				}
-			}
-			modifier = {
-			same_dynasty = yes
-				add = 10
-			}
-			modifier = {
                 add = 35
                 NOT = {
                     has_trait = zealous
@@ -168,9 +181,10 @@ ecumenical_council.0003 = {
 				add = -10
 				highest_held_title_tier < tier_duchy
 			}
+		}
 	}
 	option = {
-		name = ecumenical_council.0003.b
+		name = ecumenical_council.0004.b
 		ai_chance = {
 			base = 45
 			ai_value_modifier = {
@@ -184,10 +198,10 @@ ecumenical_council.0003 = {
 	}
 }
 
-ecumenical_council.0004 = {
+ecumenical_council.0005 = {
 	type = character_event
-	title = ecumenical_council.0004.t
-	desc = ecumenical_council.0004.desc
+	title = ecumenical_council.0005.t
+	desc = ecumenical_council.0005.desc
 	left_portrait = {
         character = scope:council_host
         animation = personality_zealous
@@ -197,6 +211,6 @@ ecumenical_council.0004 = {
         play_music_cue = "mx_cue_faith_conversion"
     }
 	option = {
-        name = ecumenical_council.0004.a
+        name = ecumenical_council.0005.a
     }
 }

@@ -17,7 +17,7 @@
 		is_ruler = yes
 		is_playable_character = yes
         is_independent_ruler = yes
-        highest_held_title_tier > 3
+        highest_held_title_tier >= tier_kingdom
         NOT = {  #Can only do it once.
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
