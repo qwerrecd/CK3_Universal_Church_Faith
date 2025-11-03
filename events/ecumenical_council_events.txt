@@ -60,11 +60,27 @@ ecumenical_council.0002 = {
             set_county_faith = faith:universal_church
         }
 		ai_chance = {
-            base = 90
+            base = 80
             modifier = {
-                add = 10
+                add = 20
                 has_trait = cynical
             }
+			modifier = {
+				add = -10
+				highest_held_title_tier >= tier_empire
+			}
+			modifier = {
+				add = 5
+				highest_held_title_tier = tier_kingdom
+			}
+			modifier = {
+				add = 10
+				highest_held_title_tier = tier_duchy
+			}
+			modifier = {
+				add = 15
+				highest_held_title_tier < tier_duchy
+			}
         }
 	}
 	option = {
@@ -113,18 +129,33 @@ ecumenical_council.0003 = {
             set_county_faith = faith:universal_church
         }
 		ai_chance = {
-			base = 60
+			base = 50
 			modifier = { 
                 add = 30
                 has_trait = cynical
             }
 			modifier = {
-                add = 15
+                add = 35
                 NOT = {
                     has_trait = zealous
                 }
             }
-		}
+			modifier = {
+				add = 20
+				highest_held_title_tier >= tier_empire
+			}
+			modifier = {
+				add = -5
+				highest_held_title_tier = tier_kingdom
+			}
+			modifier = {
+				add = -10
+				highest_held_title_tier = tier_duchy
+			}
+			modifier = {
+				add = -15
+				highest_held_title_tier < tier_duchy
+			}
 	}
 	option = {
 		name = ecumenical_council.0003.b
