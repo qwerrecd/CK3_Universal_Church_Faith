@@ -1,0 +1,176 @@
+namespace = ecumenical_council
+
+ecumenical_council.0001 = {
+	type = character_event
+	title = ecumenical_council.0001.t
+	desc = ecumenical_council.0001.desc
+	picture = GFX_evt_church_council
+	theme = realm
+
+	immediate = {
+		play_music_cue = "mx_cue_faith_conversion"
+		save_scope_as = council_host
+	}
+
+	option = {
+		name = ecumenical_council.0001.a
+		add_piety = 1000
+		custom_tooltip = ecumenical_council.0001.a.tt
+		hidden_effect = {
+			create_faith = universal_church
+			set_character_faith = universal_church
+			every_character = {
+				limit = {
+					is_alive = yes
+					is_playable_character = yes
+				}
+				if = {
+					limit = {
+						is_christian_religion_trigger = yes
+					}
+					if = {
+						limit = {
+							faith.has_doctrine = special_doctrine_ecumenical_christian
+						}
+						trigger_event = { id = ecumenical_council.0002 }
+					}
+					else = {
+						trigger_event = { id = ecumenical_council.0003 }
+					}
+				}
+				else = {
+					trigger_event = { id = ecumenical_council.0004 }
+				}
+			}
+		}
+	}
+}
+
+ecumenical_council.0002 = {
+	type = character_event
+	title = ecumenical_council.0002.t
+	desc = ecumenical_council.0002.desc
+	left_portrait = {
+        character = scope:council_host
+        animation = personality_zealous
+    }
+	theme = realm
+	immediate = {
+        faith = {
+            save_scope_as = old_faith
+        }
+    }
+
+	option = {
+		name = ecumenical_council.0002.a
+		trigger = {
+            OR = {
+                is_ai = no
+                NOT = {
+                    has_trait = zealous
+                }
+            }
+        }
+		set_character_faith = universal_church
+		every_held_title = {
+            title_tier = county
+            set_county_faith = universal_church
+        }
+		ai_chance = {
+            base = 80
+            modifier = {
+                add = 20
+                has_trait = cynical
+            }
+        }
+	}
+	option = {
+		name = ecumenical_council.0002.b
+		ai_chance = {
+			base = 20
+			ai_value_modifier = {
+                ai_zeal = 1.0
+            }
+			modifier = {
+                add = 20
+                has_trait = zealous
+            }
+		}
+	}
+}
+
+ecumenical_council.0003 = {
+	type = character_event
+	title = ecumenical_council.0003.t
+	desc = ecumenical_council.0003.desc
+	left_portrait = {
+        character = scope:council_host
+        animation = personality_zealous
+    }
+	theme = realm
+	immediate = {
+        faith = {
+            save_scope_as = old_faith
+        }
+    }
+
+	option = {
+		name = ecumenical_council.0003.a
+		trigger = {
+            OR = {
+                is_ai = no
+                NOT = {
+                    has_trait = zealous
+                }
+            }
+        }
+		set_character_faith = universal_church
+		every_held_title = {
+            title_tier = county
+            set_county_faith = universal_church
+        }
+		ai_chance = {
+			base = 60
+			modifier = { 
+                add = 25 
+                has_trait = cynical
+            }
+			modifier = {
+                add = 15
+                NOT = {
+                    has_trait = zealous
+                }
+            }
+		}
+	}
+	option = {
+		name = ecumenical_council.0003.b
+		ai_chance = {
+			base = 40
+			ai_value_modifier = {
+                ai_zeal = 1.0
+            }
+			modifier = {
+                add = 20
+                has_trait = zealous
+            }
+		}
+	}
+}
+
+ecumenical_council.0004 = {
+	type = character_event
+	title = ecumenical_council.0004.t
+	desc = ecumenical_council.0004.desc
+	left_portrait = {
+        character = scope:council_host
+        animation = personality_zealous
+    }
+	theme = realm
+	immediate = {
+        play_music_cue = "mx_cue_faith_conversion"
+    }
+	option = {
+        name = ecumenical_council.0004.a
+    }
+}

@@ -1,8 +1,8 @@
-﻿version="0.1"
+﻿version="0.2"
 tags={
 	"1.18 'Crane'"
 	"Religion"
 }
-name="Universal Church"
+name="Great Ecumenical Council"
 supported_version="1.18.*"
 remote_file_id="3598014549"

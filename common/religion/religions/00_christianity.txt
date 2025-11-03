@@ -1159,7 +1159,6 @@
 
 			#Tenets
 			doctrine = tenet_communion
-			doctrine = tenet_pentarchy
 			doctrine = tenet_monasticism
 
 			#Coronation tradition

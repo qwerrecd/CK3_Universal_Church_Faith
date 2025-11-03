@@ -1,0 +1,196 @@
+hold_ecumenical_council_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
+	desc = hold_ecumenical_council_decision_desc
+	selection_tooltip = hold_ecumenical_council_decision_tooltip
+	decision_group_type = major
+
+    ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 120
+		hegemony = 120
+	}
+
+	is_shown = {
+		is_ruler = yes
+		is_playable_character = yes
+        is_independent_ruler = yes
+        tier = king
+        NOT = {  #Can only do it once.
+			is_target_in_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_mended_great_schism
+			}
+		}
+		faith.has_doctrine = special_doctrine_ecumenical_christian #They'd never listen to an Adamite calling for this I figure.
+	}
+
+	is_valid = {
+        # 1. Prestige and Piety
+        prestige_level >= 4
+		piety_level >= max_piety_level
+
+		# 2. Five Sees controlled by Christendom
+        custom_description = {
+            text = ecumenical_council_rome_doctrine
+            title:c_roma.holder = {
+                faith = {
+                    has_doctrine = special_doctrine_ecumenical_christian
+                }
+            }
+        }
+
+        custom_description = {
+            text = ecumenical_council_constantinople_doctrine
+            title:c_byzantion.holder = {
+                faith = {
+                    has_doctrine = special_doctrine_ecumenical_christian
+                }
+            }
+        }
+
+        custom_description = {
+            text = ecumenical_council_jerusalem_doctrine
+            title:c_jerusalem.holder = {
+                faith = {
+                    has_doctrine = special_doctrine_ecumenical_christian
+                }
+            }
+        }
+
+        custom_description = {
+            text = ecumenical_council_alexandria_doctrine
+            title:c_alexandria.holder = {
+                faith = {
+                    has_doctrine = special_doctrine_ecumenical_christian
+                }
+            }
+        }
+
+        custom_description = {
+            text = ecumenical_council_antioch_doctrine
+            title:c_antiocheia.holder.faith = {
+                faith = {
+                    has_doctrine = special_doctrine_ecumenical_christian
+                }
+            }
+        }
+
+
+		# 3–7. HRE, ERE, Papacy, Ecumenical Patriarchate, Coptic Papacy
+		exists = title:e_hre
+		title:e_hre.holder = { 
+            opinion = { 
+                target = root value >= 75 
+            }
+        }
+
+		exists = title:e_byzantium
+		title:e_byzantium.holder = { 
+            opinion = { 
+                target = root value >= 75 
+            }
+        }
+
+        # Catholic Head of Faith Approves
+        custom_description = {
+            text = ecumenical_papacy_approval
+            exists = title:k_papal_state
+            title:k_papal_state.holder = {
+                OR = {
+                    AND = {
+                        has_trait = zealous
+                        opinion = { target = root value >= 100 }
+                    }
+                    AND = {
+                        NOT = { has_trait = zealous }
+                        opinion = { target = root value >= 75 }
+                    }
+                }
+            }
+        }
+
+        # Orthodox Head of Faith Approves
+        custom_description = {
+            text = ecumenical_orthodox_approval
+            exists = title:k_orthodox
+            title:k_orthodox.holder = {
+                OR = {
+                    AND = {
+                        has_trait = zealous
+                        opinion = { target = root value >= 100 }
+                    }
+                    AND = {
+                        NOT = { has_trait = zealous }
+                        opinion = { target = root value >= 75 }
+                    }
+                }
+            }
+        }
+
+        # Coptic Head of Faith Approves
+        custom_description = {
+            text = ecumenical_coptic_approval
+            exists = title:d_coptic_papacy
+            title:d_coptic_papacy.holder = {
+                OR = {
+                    AND = {
+                        has_trait = zealous
+                        opinion = { target = root value >= 100 }
+                    }
+                    AND = {
+                        NOT = { has_trait = zealous }
+                        opinion = { target = root value >= 75 }
+                    }
+                }
+            }
+        }
+
+		# 8. Learning requirement
+		OR = {
+			learning >= 18
+			AND = {
+                learning >= 12
+                has_trait = theologian
+            }
+		}
+
+		# 9. Control Jerusalem
+		completely_controls = title:k_jerusalem
+
+		# 10. Independent + Ruler tier
+		is_independent_ruler = yes
+		OR = {
+            highest_held_title_tier >= 5
+            has_title = title:k_jerusalem
+        }
+	}
+
+	is_valid_showing_failures_only = {
+		is_landed = yes
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	effect = { 
+        gain_holy_legend_seed_tooltip_effect = yes
+        custom_tooltip = hold_ecumenical_council_decision_effect_tooltip
+        hidden_effect = { # no double schism mending
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_mended_great_schism
+			}
+		}
+        trigger_event = ecumenical_council.0001 
+        }
+
+	ai_potential = { 
+        always = yes
+    }
+	ai_will_do = { 
+        base = 100 
+    }
+}
