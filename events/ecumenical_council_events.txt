@@ -60,7 +60,17 @@ ecumenical_council.0002 = {
             set_county_faith = faith:universal_church
         }
 		ai_chance = {
-            base = 80
+            base = 85
+			modifier = {
+				same_dynasty = yes
+				add = 15
+			}
+			modifier = {
+				add = 15
+				any_title = {
+					has_title = title:c_jerusalem
+				}
+			}
             modifier = {
                 add = 20
                 has_trait = cynical
@@ -71,14 +81,10 @@ ecumenical_council.0002 = {
 			}
 			modifier = {
 				add = 5
-				highest_held_title_tier = tier_kingdom
-			}
-			modifier = {
-				add = 10
 				highest_held_title_tier = tier_duchy
 			}
 			modifier = {
-				add = 15
+				add = 10
 				highest_held_title_tier < tier_duchy
 			}
         }
@@ -86,7 +92,7 @@ ecumenical_council.0002 = {
 	option = {
 		name = ecumenical_council.0002.b
 		ai_chance = {
-			base = 20
+			base = 15
 			ai_value_modifier = {
                 ai_zeal = 1.0
             }
@@ -129,11 +135,21 @@ ecumenical_council.0003 = {
             set_county_faith = faith:universal_church
         }
 		ai_chance = {
-			base = 50
+			base = 55
 			modifier = { 
                 add = 30
                 has_trait = cynical
             }
+			modifier = {
+				add = 15
+				any_title = {
+					has_title = title:c_jerusalem
+				}
+			}
+			modifier = {
+			same_dynasty = yes
+				add = 10
+			}
 			modifier = {
                 add = 35
                 NOT = {
@@ -146,26 +162,22 @@ ecumenical_council.0003 = {
 			}
 			modifier = {
 				add = -5
-				highest_held_title_tier = tier_kingdom
-			}
-			modifier = {
-				add = -10
 				highest_held_title_tier = tier_duchy
 			}
 			modifier = {
-				add = -15
+				add = -10
 				highest_held_title_tier < tier_duchy
 			}
 	}
 	option = {
 		name = ecumenical_council.0003.b
 		ai_chance = {
-			base = 40
+			base = 45
 			ai_value_modifier = {
                 ai_zeal = 1.0
             }
 			modifier = {
-                add = 20
+                add = 35
                 has_trait = zealous
             }
 		}
