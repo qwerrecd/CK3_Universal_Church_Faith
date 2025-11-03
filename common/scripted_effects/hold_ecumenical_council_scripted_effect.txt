@@ -1,0 +1,42 @@
+﻿hold_ecumenical_council_scripted_effect = {
+	every_player = { #Notify members of other ecumenical Christian branches that the council has come to an agreement.
+		limit = {
+			faith.religion = root.faith.religion
+			faith != root.faith
+			NOT = { government_has_flag = government_is_theocracy }
+			this != this.faith.religious_head
+			faith = {
+				has_doctrine = special_doctrine_ecumenical_christian
+			}
+		}
+		trigger_event = ecumenical_council.0002
+	}
+    every_player = { #Notify members of other Christian branches that they need to get on board or get run over.
+		limit = {
+			faith.religion = root.faith.religion
+			faith != root.faith
+			NOT = { government_has_flag = government_is_theocracy }
+			this != this.faith.religious_head
+			NOT = {
+                faith = {
+				    has_doctrine = special_doctrine_ecumenical_christian
+			    }
+            }
+		}
+		trigger_event = ecumenical_council.0003
+	}
+	every_player = { #Then notify all infidel players that might be around.
+		limit = {
+			OR = {
+				AND = { #Either filthy heretics...
+					faith.religion = root.faith.religion
+					faith = { NOT = { has_doctrine = special_doctrine_ecumenical_christian } }
+				}
+				faith.religion != root.faith.religion
+			}
+		}
+		trigger_event = ecumenical_council.0004
+	}
+
+	set_nickname_effect = { NICKNAME = nick_the_ecumenist }
+}

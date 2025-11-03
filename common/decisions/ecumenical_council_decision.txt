@@ -1,4 +1,4 @@
-hold_ecumenical_council_decision = {
+﻿hold_ecumenical_council_decision = {
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
 	desc = hold_ecumenical_council_decision_desc
 	selection_tooltip = hold_ecumenical_council_decision_tooltip
@@ -17,14 +17,14 @@ hold_ecumenical_council_decision = {
 		is_ruler = yes
 		is_playable_character = yes
         is_independent_ruler = yes
-        tier = king
+        highest_held_title_tier > 3
         NOT = {  #Can only do it once.
 			is_target_in_global_variable_list = {
 				name = unavailable_unique_decisions
 				target = flag:flag_mended_great_schism
 			}
 		}
-		faith.has_doctrine = special_doctrine_ecumenical_christian #They'd never listen to an Adamite calling for this I figure.
+		faith = { has_doctrine = special_doctrine_ecumenical_christian } #They'd never listen to an Adamite calling for this I figure.
 	}
 
 	is_valid = {
@@ -71,7 +71,7 @@ hold_ecumenical_council_decision = {
 
         custom_description = {
             text = ecumenical_council_antioch_doctrine
-            title:c_antiocheia.holder.faith = {
+            title:c_antiocheia.holder = {
                 faith = {
                     has_doctrine = special_doctrine_ecumenical_christian
                 }
@@ -176,16 +176,20 @@ hold_ecumenical_council_decision = {
 	}
 
 	effect = { 
+        add_piety = 1000
         gain_holy_legend_seed_tooltip_effect = yes
         custom_tooltip = hold_ecumenical_council_decision_effect_tooltip
+        show_as_tooltip = {
+			hold_ecumenical_council_scripted_effect = yes
+		}
+        trigger_event = ecumenical_council.0001
         hidden_effect = { # no double schism mending
 			add_to_global_variable_list = {
 				name = unavailable_unique_decisions
 				target = flag:flag_mended_great_schism
 			}
 		}
-        trigger_event = ecumenical_council.0001 
-        }
+    }
 
 	ai_potential = { 
         always = yes

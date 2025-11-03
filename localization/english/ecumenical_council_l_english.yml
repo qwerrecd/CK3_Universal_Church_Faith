@@ -36,3 +36,6 @@
   ecumenical_council_jerusalem_doctrine:0 "[GetTitleByKey('c_jerusalem').GetName] must be held by a ruler whose faith has the [GetFaithDoctrine('special_doctrine_ecumenical_christian').GetBaseName] Doctrine."
   ecumenical_council_alexandria_doctrine:0 "[GetTitleByKey('c_alexandria').GetName] must be held by a ruler whose faith has the [GetFaithDoctrine('special_doctrine_ecumenical_christian').GetBaseName] Doctrine."
   ecumenical_council_antioch_doctrine:0 "[GetTitleByKey('c_antiocheia').GetName] must be held by a ruler whose faith has the [GetFaithDoctrine('special_doctrine_ecumenical_christian').GetBaseName] Doctrine."
+
+  fervor_gain_mended_schism_ecumenical:0 "The Great Ecumenical Council has mended the East-West Schism and united Christendom."
+  fervor_loss_mended_schism_ecumenical:0 "Holdouts from the unification of Christendom."

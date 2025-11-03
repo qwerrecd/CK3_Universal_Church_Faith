@@ -1,11 +1,15 @@
+﻿
 namespace = ecumenical_council
 
 ecumenical_council.0001 = {
 	type = character_event
 	title = ecumenical_council.0001.t
 	desc = ecumenical_council.0001.desc
-	picture = GFX_evt_church_council
 	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
 
 	immediate = {
 		play_music_cue = "mx_cue_faith_conversion"
@@ -14,35 +18,14 @@ ecumenical_council.0001 = {
 
 	option = {
 		name = ecumenical_council.0001.a
-		add_piety = 1000
 		custom_tooltip = ecumenical_council.0001.a.tt
-		hidden_effect = {
-			create_faith = universal_church
-			set_character_faith = universal_church
-			every_character = {
-				limit = {
-					is_alive = yes
-					is_playable_character = yes
-				}
-				if = {
-					limit = {
-						is_christian_religion_trigger = yes
-					}
-					if = {
-						limit = {
-							faith.has_doctrine = special_doctrine_ecumenical_christian
-						}
-						trigger_event = { id = ecumenical_council.0002 }
-					}
-					else = {
-						trigger_event = { id = ecumenical_council.0003 }
-					}
-				}
-				else = {
-					trigger_event = { id = ecumenical_council.0004 }
-				}
-			}
+
+		set_character_faith = faith:universal_church
+		every_held_title = {
+			title_tier = county
+			set_county_faith = faith:universal_church
 		}
+		hold_ecumenical_council_scripted_effect = yes
 	}
 }
 
@@ -71,10 +54,10 @@ ecumenical_council.0002 = {
                 }
             }
         }
-		set_character_faith = universal_church
+		set_character_faith = faith:universal_church
 		every_held_title = {
             title_tier = county
-            set_county_faith = universal_church
+            set_county_faith = faith:universal_church
         }
 		ai_chance = {
             base = 80
@@ -124,10 +107,10 @@ ecumenical_council.0003 = {
                 }
             }
         }
-		set_character_faith = universal_church
+		set_character_faith = faith:universal_church
 		every_held_title = {
             title_tier = county
-            set_county_faith = universal_church
+            set_county_faith = faith:universal_church
         }
 		ai_chance = {
 			base = 60
