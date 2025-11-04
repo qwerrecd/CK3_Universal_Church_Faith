@@ -198,3 +198,89 @@
         base = 100 
     }
 }
+
+dismantle_papacy_decision = { #For Muslims and Pagans.
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+	desc = dismantle_papacy_decision_desc
+	selection_tooltip = dismantle_papacy_decision_tooltip
+	decision_group_type = major
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 60
+		empire = 60
+		hegemony = 60
+	}
+
+	is_shown = {
+		is_ruler = yes
+		is_playable_character = yes
+		faith:catholic = {
+			has_doctrine = doctrine_spiritual_head
+		}
+
+		faith:catholic = {
+			faith_hostility_level = {
+				target = root.faith
+				value >= faith_hostile_level
+			}
+            exists = religious_head # dunno why this isn't a check in vanilla but we need it for the edge case
+            this.religion != root.faith.religion # this event is clearly designed for non-Christians
+		}
+		highest_held_title_tier > 3 #Only Kings and Emperors
+		capital_province = { #Indians could not possibly care...
+			OR = {
+				geographical_region = world_europe
+				geographical_region = world_middle_east
+				geographical_region = world_africa_north
+			}
+		}
+	}
+
+	is_valid = {
+		trigger_if = {
+			limit = {
+				exists = title:k_papal_state.holder
+			}
+			title:k_papal_state.holder = { is_playable_character = no } #If he fled elsewhere, it cannot be done, the Pope must be landless.
+			title:k_papal_state.holder = { is_at_war = no } #Shouldn't be possible during a Crusade
+		}
+		completely_controls_region = world_europe_south_italy
+	}
+
+	is_valid_showing_failures_only = {
+		is_landed = yes
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+	effect = {
+		custom_tooltip = dismantle_papacy_decision_effect_tooltip
+		gain_holy_legend_seed_tooltip_effect = yes
+		hidden_effect = {
+			legend_seed_great_deed_faith_effect = {
+				ANTAGONIST = title:k_papal_state.holder
+				OLD_FAITH = title:k_papal_state.holder.faith
+			}
+		}
+		show_as_tooltip = {
+			destroy_papacy_scripted_effect = yes
+		}
+		trigger_event = {
+			id = roman_restoration.0130
+		}
+	}
+	
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = { #Do it always.
+		base = 100
+	}
+}
