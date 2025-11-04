@@ -466,6 +466,13 @@ ecumenical_council.0200 = {
         scope:scoped_coptic = { # coptic pope converts and the title goes away
             set_character_faith = faith:universal_church
         }
+        title:e_byzantium.holder = {
+            set_character_faith = faith:universal_church
+        }
+        title:e_hre.holder = {
+            set_character_faith = faith:universal_church
+        }
+        title:e_byzantium = { set_state_faith = faith:universal_church }
 		every_held_title = {
 			title_tier = county
 			set_county_faith = faith:universal_church

@@ -32,5 +32,26 @@
 		trigger_event = ecumenical_council.0203
 	}
 
+	faith:universal_church = {
+		change_fervor = {
+			value = 25
+			desc = fervor_gain_mended_schism
+		}
+		religion:christianity_religion = {
+			every_faith = {
+				custom = every_ecumenical_christian_faith.tt
+				limit = {
+					this.religion = root.faith.religion
+					has_doctrine = special_doctrine_ecumenical_christian
+					this != root.faith
+				}
+				change_fervor = {
+					value = -25
+					desc = fervor_loss_mended_schism
+				}
+			}
+		}
+	}
+
 	set_nickname_effect = { NICKNAME = nick_the_ecumenist }
 }
