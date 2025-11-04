@@ -1,6 +1,10 @@
 ﻿
 namespace = ecumenical_council
+# A Grand Ecumenical Council is called
 
+# The Council begins
+
+# Evangelism - by the sword or by the book?
 ecumenical_council.0001 = {
 	type = character_event
 	title = ecumenical_council.0001.t
@@ -47,6 +51,27 @@ ecumenical_council.0001 = {
 	}
 }
 
+# I'm honestly just going on vibes and a vague aim for verisimilitude.
+# Does a debate on that doctrine that *feel* realistic within the context of my alt-history?
+
+# Religious Attitude - How will our attitude be towards those not of the faith?
+
+# Christian ecumenism - How do we treat those who refuse to submit to the declaration of our council?
+
+# Divorce - God hates divorce, but just how much?
+
+# Bastardization - Have we given too much leeway to rulers living in sin?
+
+# Consanguinity - The Bible prohibits incest, but where is the line?
+
+# Adultery - Have we made a mistake by treating it differently with men vs women?
+
+# Clerical Function - What exactly *does* the local priest do?
+
+# Clerical Marriage - Were Paul's statements on working better for God by not getting married prescriptive or aspirational?
+
+# A new unified faith is proclaimed!
+
 ecumenical_council.0002 = {
 	type = character_event
 	title = ecumenical_council.0002.t
@@ -71,6 +96,8 @@ ecumenical_council.0002 = {
 		hold_ecumenical_council_scripted_effect = yes
 	}
 }
+
+# Will those close brothers of the faith convert?
 
 ecumenical_council.0003 = {
 	type = character_event
@@ -100,7 +127,7 @@ ecumenical_council.0003 = {
 		ai_chance = {
             base = 85
             modifier = {
-                add = 20
+                add = 15
                 has_trait = cynical
             }
 			modifier = {
@@ -125,12 +152,14 @@ ecumenical_council.0003 = {
                 ai_zeal = 1.0
             }
 			modifier = {
-                add = 20
+                add = 25
                 has_trait = zealous
             }
 		}
 	}
 }
+
+# Will those who have strayed far return?
 
 ecumenical_council.0004 = {
 	type = character_event
@@ -197,6 +226,8 @@ ecumenical_council.0004 = {
 		}
 	}
 }
+
+# The heathens will mock as they always do
 
 ecumenical_council.0005 = {
 	type = character_event
