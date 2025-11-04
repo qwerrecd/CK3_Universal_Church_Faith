@@ -43,7 +43,7 @@
   # 0001 - Opening of the Council
   ecumenical_council.0001.t:0 "The Great Council Convenes"
   ecumenical_council.0001.desc:0 "Bishops, abbots, patriarchs, and theologians from across Christendom have gathered under one roof in Jerusalem. The air hums with both tension and hope. Soon, the Church shall once again speak with one voice, if only we can agree on what that voice shall say."
-  ecumenical_council.0001.a:0 "‘For where two or three are gathered together in my name, there am I in the midst of them.' - Matthew 18:20"
+  ecumenical_council.0001.a:0 "‘For where two or three are gathered together in my name...' - Matthew 18:20"
 
   # 0100 - Debate 1: Religious Attitude
   ecumenical_council.0100.t:0 "The Question of the Stranger"
@@ -80,7 +80,7 @@
   # 0105 - Adultery
   ecumenical_council.0105.t:0 "The Matter of Adultery"
   ecumenical_council.0105.desc:0 "The council now turns to matters of adultery. Some argue that men and women should face equal consequences for adultery, while others call for differentiated treatment. How will the Church define sin and justice in this matter?"
-  ecumenical_council.0105.a:0 "‘Whosoever looketh on a woman to lust... hath committed adultery already.' - Matthew 5:28"
+  ecumenical_council.0105.a:0 "‘Whosoever looketh on a woman to lust... hath committed adultery' - Matthew 5:28"
   ecumenical_council.0105.b:0 "‘Let him that is without sin cast the first stone.' - John 8:7"
   ecumenical_council.0105.c:0 "‘Judge not, that ye be not judged.' - Matthew 7:1"
 
@@ -101,3 +101,9 @@
   ecumenical_council.0108.desc:0 "Out first major order of business is to decide how we shall spread our faith to the nations. Some argue to continue the work of the sword, arguing that our success in reclaiming the Holy Land proves its holiness before God. Others say that we should put down our weapons and return to spreading the faith by the way of the Apostles."
   ecumenical_council.0108.a:0 "'Take nothing for the journey except a staff.' - Mark 6:8"
   ecumenical_council.0108.b:0 "'I did not come to bring peace, but a sword.' - Matthew 10:34"
+
+  # 0109 - Unity in the Faith
+  ecumenical_council.0109.t:0 "The Nature of True Unity"
+  ecumenical_council.0109.desc:0 "As debate nears its end within the council halls, two visions of maintaining the newly won unity of the Church emerge. Some argue that understanding and instruction will unify believers. Others claim that certainty and resolve are the true common pillars of faith. Shall our vaunted unity come from shared reason? Or from shared conviction?"
+  ecumenical_council.0109.a:0 "'Come now, and let us reason together, says the Lord.' - Isaiah 1:18"
+  ecumenical_council.0109.b:0 "'Be on your guard; stand firm in the faith; be courageous; be strong.' - Matthew 10:34"
