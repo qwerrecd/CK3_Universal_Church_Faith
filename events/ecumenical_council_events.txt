@@ -437,6 +437,35 @@ ecumenical_council.0200 = {
 	option = {
 		name = ecumenical_council.0200.a
 		set_character_faith = faith:universal_church
+        # the 3 heads of faith will convert and the titles will be destroyed
+        # to simulate all submitting under the banner of the council's doctrine
+        # i tagged this as alt-history so don't complain about realism lol
+        # i also figure this sorta thing doesn't work if there isn't a pope, ecumenical patriarch, and coptic head of faith
+        # but maybe that's an excuse for not bothering to handle those cases where they don't exist
+        if = {
+			limit = { exists = title:k_papal_state.holder }
+			title:k_papal_state.holder = { save_scope_as = scoped_pope }
+		}
+        destroy_title = title:k_papal_state
+        scope:scoped_pope = { # pope converts and the title goes away
+            set_character_faith = faith:universal_church
+        }
+        if = {
+			limit = { exists = title:k_orthodox.holder }
+			title:k_orthodox.holder = { save_scope_as = scoped_patriarch }
+		}
+        destroy_title = title:k_orthodox
+        scope:scoped_patriarch = { # patriarch converts and the title goes away
+            set_character_faith = faith:universal_church
+        }
+        if = {
+			limit = { exists = title:d_coptic_papacy.holder }
+			title:d_coptic_papacy.holder = { save_scope_as = scoped_coptic }
+		}
+        destroy_title = title:d_coptic_papacy
+        scope:scoped_coptic = { # coptic pope converts and the title goes away
+            set_character_faith = faith:universal_church
+        }
 		every_held_title = {
 			title_tier = county
 			set_county_faith = faith:universal_church
