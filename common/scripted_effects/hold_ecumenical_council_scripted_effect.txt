@@ -9,7 +9,7 @@
 				has_doctrine = special_doctrine_ecumenical_christian
 			}
 		}
-		trigger_event = ecumenical_council.0002
+		trigger_event = ecumenical_council.0201
 	}
     every_ruler = { #Notify members of other Christian branches that they need to get on board or get run over.
 		limit = {
@@ -23,19 +23,13 @@
 			    }
             }
 		}
-		trigger_event = ecumenical_council.0003
+		trigger_event = ecumenical_council.0202
 	}
 	every_player = { #Then notify all infidel players that might be around.
 		limit = {
-			OR = {
-				AND = { #Either filthy heretics...
-					faith.religion = root.faith.religion
-					faith = { NOT = { has_doctrine = special_doctrine_ecumenical_christian } }
-				}
-				faith.religion != root.faith.religion
-			}
+			faith.religion != root.faith.religion
 		}
-		trigger_event = ecumenical_council.0004
+		trigger_event = ecumenical_council.0203
 	}
 
 	set_nickname_effect = { NICKNAME = nick_the_ecumenist }

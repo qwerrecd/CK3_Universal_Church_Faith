@@ -2,13 +2,218 @@
 namespace = ecumenical_council
 # A Grand Ecumenical Council is called
 
-# The Council begins
-
-# Evangelism - by the sword or by the book?
 ecumenical_council.0001 = {
 	type = character_event
 	title = ecumenical_council.0001.t
 	desc = ecumenical_council.0001.desc
+	left_portrait = {
+        character = scope:council_host
+        animation = personality_zealous
+    }
+	theme = realm
+
+	immediate = {
+		save_scope_as = council_host
+	}
+	
+	option = {
+		name = ecumenical_council.0001.a
+		trigger_event = {
+			id = ecumenical_council.0100
+			days = 14
+		}
+	}
+}
+
+# The Council begins
+
+
+
+# I'm honestly just going on vibes and a vague aim for verisimilitude.
+# Does a debate on that doctrine that *feel* realistic within the context of my alt-history?
+
+# Debate 1: Religious Attitude
+ecumenical_council.0100 = {
+    type = character_event
+    title = ecumenical_council.0100.t
+    desc = ecumenical_council.0100.desc
+    theme = realm
+
+    option = {
+        name = ecumenical_council.0100.a
+		faith:universal_church = { remove_doctrine = doctrine_pluralism_righteous }
+        faith:universal_church = { add_doctrine = doctrine_pluralism_fundamentalist }
+        trigger_event = { id = ecumenical_council.0101 days = {7 14} }
+    }
+    option = {
+        name = ecumenical_council.0100.b
+        faith:universal_church = { add_doctrine = doctrine_pluralism_righteous }
+        trigger_event = { id = ecumenical_council.0101 days = {7 14} }
+    }
+    option = {
+        name = ecumenical_council.0100.c
+		faith:universal_church = { remove_doctrine = doctrine_pluralism_righteous }
+        faith:universal_church = { add_doctrine = doctrine_pluralism_pluralistic }
+        trigger_event = { id = ecumenical_council.0101 days = {7 14} }
+    }
+}
+
+# Debate 2: Christian Ecumenism
+ecumenical_council.0101 = {
+    type = character_event
+    title = ecumenical_council.0101.t
+    desc = ecumenical_council.0101.desc
+    theme = realm
+
+    option = {
+        name = ecumenical_council.0101.a
+        faith:universal_church = {
+            remove_doctrine = special_doctrine_ecumenical_christian
+        }
+        trigger_event = { id = ecumenical_council.0102 days = {7 14} }
+    }
+    option = {
+        name = ecumenical_council.0101.b
+        trigger_event = { id = ecumenical_council.0102 days = {7 14} }
+    }
+}
+
+# Debate 3: Divorce
+ecumenical_council.0102 = {
+    type = character_event
+    title = ecumenical_council.0102.t
+    desc = ecumenical_council.0102.desc
+    theme = realm
+
+    option = {
+        name = ecumenical_council.0102.a
+		faith:universal_church = { remove_doctrine = doctrine_divorce_approval }
+        faith:universal_church = { add_doctrine = doctrine_divorce_disallowed }
+        trigger_event = { id = ecumenical_council.0103 days = {7 14} }
+    }
+    option = {
+        name = ecumenical_council.0102.b
+        faith:universal_church = { add_doctrine = doctrine_divorce_approval }
+        trigger_event = { id = ecumenical_council.0103 days = {7 14} }
+    }
+}
+
+# Debate 4: Bastardization
+ecumenical_council.0103 = {
+    type = character_event
+    title = ecumenical_council.0103.t
+    desc = ecumenical_council.0103.desc
+    theme = realm
+
+    option = {
+        name = ecumenical_council.0103.a
+		faith:universal_church = { remove_doctrine = doctrine_bastardry_legitimization }
+        faith:universal_church = { add_doctrine = doctrine_bastardry_none }
+        trigger_event = { id = ecumenical_council.0104 days = {7 14} }
+    }
+    option = {
+        name = ecumenical_council.0103.b
+        faith:universal_church = { add_doctrine = doctrine_bastardry_legitimization }
+        trigger_event = { id = ecumenical_council.0104 days = {7 14} }
+    }
+}
+
+# Debate 5: Consanguinity
+ecumenical_council.0104 = {
+    type = character_event
+    title = ecumenical_council.0104.t
+    desc = ecumenical_council.0104.desc
+    theme = realm
+
+    option = {
+        name = ecumenical_council.0104.a
+		faith:universal_church = { remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
+        faith:universal_church = { add_doctrine = doctrine_consanguinity_restricted }
+        trigger_event = { id = ecumenical_council.0105 days = {7 14} }
+    }
+    option = {
+        name = ecumenical_council.0104.b
+		faith:universal_church = { remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
+        faith:universal_church = { add_doctrine = doctrine_consanguinity_cousins }
+        trigger_event = { id = ecumenical_council.0105 days = {7 14} }
+    }
+    option = {
+        name = ecumenical_council.0104.c
+        faith:universal_church = { add_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
+        trigger_event = { id = ecumenical_council.0105 days = {7 14} }
+    }
+}
+
+# Debate 6: Adultery
+ecumenical_council.0105 = {
+    type = character_event
+    title = ecumenical_council.0105.t
+    desc = ecumenical_council.0105.desc
+    theme = realm
+
+    option = {
+        name = ecumenical_council.0105.a
+		faith:universal_church = { remove_doctrine = doctrine_adultery_men_shunned }
+        faith:universal_church = { add_doctrine = doctrine_adultery_men_crime }
+        trigger_event = { id = ecumenical_council.0106 days = {7 14} }
+    }
+    option = {
+        name = ecumenical_council.0105.b
+		faith:universal_church = { remove_doctrine = doctrine_adultery_women_crime }
+        faith:universal_church = { add_doctrine = doctrine_adultery_women_shunned }
+        trigger_event = { id = ecumenical_council.0106 days = {7 14} }
+    }
+    option = {
+        name = ecumenical_council.0105.c
+        trigger_event = { id = ecumenical_council.0106 days = {7 14} }
+    }
+}
+
+# Debate 7: Clerical Function
+ecumenical_council.0106 = {
+    type = character_event
+    title = ecumenical_council.0106.t
+    desc = ecumenical_council.0106.desc
+    theme = realm
+
+    option = {
+        name = ecumenical_council.0106.a
+        faith:universal_church = { add_doctrine = doctrine_clerical_function_taxation }
+        trigger_event = { id = ecumenical_council.0107 days = {7 14} }
+    }
+    option = {
+        name = ecumenical_council.0106.b
+		faith:universal_church = { remove_doctrine = doctrine_clerical_function_taxation }
+        faith:universal_church = { add_doctrine = doctrine_clerical_function_alms_and_pacification }
+        trigger_event = { id = ecumenical_council.0107 days = {7 14} }
+    }
+}
+
+# Debate 8: Clerical Marriage
+ecumenical_council.0107 = {
+    type = character_event
+    title = ecumenical_council.0107.t
+    desc = ecumenical_council.0107.desc
+    theme = realm
+
+    option = {
+        name = ecumenical_council.0107.a
+        faith:universal_church = { add_doctrine = doctrine_clerical_marriage_disallowed }
+        trigger_event = { id = ecumenical_council.0108 days = {7 14} }
+    }
+    option = {
+        name = ecumenical_council.0107.b
+		faith:universal_church = { remove_doctrine = doctrine_clerical_marriage_disallowed }
+        faith:universal_church = { add_doctrine = doctrine_clerical_marriage_allowed }
+        trigger_event = { id = ecumenical_council.0108 days = {7 14} }
+    }
+}
+
+# Debate 9: Spreading the Faith
+ecumenical_council.0108 = {
+	type = character_event
+	title = ecumenical_council.0108.t
+	desc = ecumenical_council.0108.desc
 	left_portrait = {
         character = scope:council_host
         animation = personality_zealous
@@ -24,7 +229,7 @@ ecumenical_council.0001 = {
 	}
 
 	option = {
-		name = ecumenical_council.0001.a
+		name = ecumenical_council.0108.a
 		ai_chance = {
             base = 50
         }
@@ -32,12 +237,12 @@ ecumenical_council.0001 = {
 			add_doctrine = tenet_mendicant_preachers
 		}
 		trigger_event = {
-			id = ecumenical_council.0002
-			days = 7
+			id = ecumenical_council.0200
+			days = {7 14}
 		}
 	}
 	option = {
-		name = ecumenical_council.0001.b
+		name = ecumenical_council.0108.b
 		ai_chance = {
 			base = 50
 		}
@@ -45,37 +250,18 @@ ecumenical_council.0001 = {
 			add_doctrine = tenet_armed_pilgrimages
 		}
 		trigger_event = {
-			id = ecumenical_council.0002
-			days = 7
+			id = ecumenical_council.0200
+			days = {7 14}
 		}
 	}
 }
 
-# I'm honestly just going on vibes and a vague aim for verisimilitude.
-# Does a debate on that doctrine that *feel* realistic within the context of my alt-history?
-
-# Religious Attitude - How will our attitude be towards those not of the faith?
-
-# Christian ecumenism - How do we treat those who refuse to submit to the declaration of our council?
-
-# Divorce - God hates divorce, but just how much?
-
-# Bastardization - Have we given too much leeway to rulers living in sin?
-
-# Consanguinity - The Bible prohibits incest, but where is the line?
-
-# Adultery - Have we made a mistake by treating it differently with men vs women?
-
-# Clerical Function - What exactly *does* the local priest do?
-
-# Clerical Marriage - Were Paul's statements on working better for God by not getting married prescriptive or aspirational?
-
 # A new unified faith is proclaimed!
 
-ecumenical_council.0002 = {
+ecumenical_council.0200 = {
 	type = character_event
-	title = ecumenical_council.0002.t
-	desc = ecumenical_council.0002.desc
+	title = ecumenical_council.0200.t
+	desc = ecumenical_council.0200.desc
 	theme = realm
 	left_portrait = {
 		character = root
@@ -87,7 +273,7 @@ ecumenical_council.0002 = {
 	}
 
 	option = {
-		name = ecumenical_council.0002.a
+		name = ecumenical_council.0200.a
 		set_character_faith = faith:universal_church
 		every_held_title = {
 			title_tier = county
@@ -99,10 +285,10 @@ ecumenical_council.0002 = {
 
 # Will those close brothers of the faith convert?
 
-ecumenical_council.0003 = {
+ecumenical_council.0201 = {
 	type = character_event
-	title = ecumenical_council.0003.t
-	desc = ecumenical_council.0003.desc
+	title = ecumenical_council.0201.t
+	desc = ecumenical_council.0201.desc
 	left_portrait = {
         character = scope:council_host
         animation = personality_zealous
@@ -110,7 +296,7 @@ ecumenical_council.0003 = {
 	theme = realm
 
 	option = {
-		name = ecumenical_council.0003.a
+		name = ecumenical_council.0201.a
 		trigger = {
             OR = {
                 is_ai = no
@@ -145,7 +331,7 @@ ecumenical_council.0003 = {
         }
 	}
 	option = {
-		name = ecumenical_council.0003.b
+		name = ecumenical_council.0201.b
 		ai_chance = {
 			base = 15
 			ai_value_modifier = {
@@ -161,10 +347,10 @@ ecumenical_council.0003 = {
 
 # Will those who have strayed far return?
 
-ecumenical_council.0004 = {
+ecumenical_council.0202 = {
 	type = character_event
-	title = ecumenical_council.0004.t
-	desc = ecumenical_council.0004.desc
+	title = ecumenical_council.0202.t
+	desc = ecumenical_council.0202.desc
 	left_portrait = {
         character = scope:council_host
         animation = personality_zealous
@@ -172,7 +358,7 @@ ecumenical_council.0004 = {
 	theme = realm
 
 	option = {
-		name = ecumenical_council.0004.a
+		name = ecumenical_council.0202.a
 		trigger = {
             OR = {
                 is_ai = no
@@ -213,7 +399,7 @@ ecumenical_council.0004 = {
 		}
 	}
 	option = {
-		name = ecumenical_council.0004.b
+		name = ecumenical_council.0202.b
 		ai_chance = {
 			base = 45
 			ai_value_modifier = {
@@ -229,10 +415,10 @@ ecumenical_council.0004 = {
 
 # The heathens will mock as they always do
 
-ecumenical_council.0005 = {
+ecumenical_council.0203 = {
 	type = character_event
-	title = ecumenical_council.0005.t
-	desc = ecumenical_council.0005.desc
+	title = ecumenical_council.0203.t
+	desc = ecumenical_council.0203.desc
 	left_portrait = {
         character = scope:council_host
         animation = personality_zealous
@@ -242,6 +428,6 @@ ecumenical_council.0005 = {
         play_music_cue = "mx_cue_faith_conversion"
     }
 	option = {
-        name = ecumenical_council.0005.a
+        name = ecumenical_council.0203.a
     }
 }

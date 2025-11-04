@@ -6,29 +6,24 @@
   hold_ecumenical_council_decision_confirm:0 "The time for unity is now!"
   hold_ecumenical_council_decision_effect_tooltip:0 "The disparate Christian faiths will come together for a council dedicated to ending the schisms dividing Christendom."
 
-  ecumenical_council.0001.t:0 "The Matter of Evangelism"
-  ecumenical_council.0001.desc:0 "Out first major order of business is to decide how we shall spread our faith to the nations. Some argue to continue the work of the sword, arguing that our success in reclaiming the Holy Land proves its holiness before God. Others say that we should put down our weapons and return to spreading the faith by the way of the Apostles."
-  ecumenical_council.0001.a:0 "Take nothing for the journey except a staff—no bread, no bag, no money in your belts...."
-  ecumenical_council.0001.b:0 "I did not come to bring peace, but a sword..."
+  ecumenical_council.0200.t:0 "The Great Ecumenical Council Concludes"
+  ecumenical_council.0200.desc:0 "The five ancient sees stand reclaimed by wider Christendom. The emperors of East and West lend their blessing, and the heads of the ancient churches have gathered in assembly. After months of debate, the Universal Church is proclaimed."
+  ecumenical_council.0200.a:0 "Let the Universal Church be born!"
+  ecumenical_council.0200.a.tt:0 "The [GetFaithByKey('universal_church').GetAdjective] Church is founded, and all of Christendom is invited to join."
 
-  ecumenical_council.0002.t:0 "The Great Ecumenical Council Convenes"
-  ecumenical_council.0002.desc:0 "The five ancient sees stand reclaimed by wider Christendom. The emperors of East and West lend their blessing, and the heads of the ancient churches gather in assembly. After months of debate, the Universal Church is proclaimed."
-  ecumenical_council.0002.a:0 "Let the Universal Church be born!"
-  ecumenical_council.0002.a.tt:0 "The [GetFaithByKey('universal_church').GetAdjective] Church is founded, and all of Christendom is invited to join."
+  ecumenical_council.0201.t:0 "A New Universal Faith"
+  ecumenical_council.0201.desc:0 "The great council has reconciled the ancient divides of Christendom. Those who have always sought unity now see their dream realized. You are invited to embrace the [GetFaithByKey('universal_church').GetAdjective] Church."
+  ecumenical_council.0201.a:0 "I shall join this new Universal Church."
+  ecumenical_council.0201.b:0 "My beliefs are unshaken by this posturing."
 
-  ecumenical_council.0003.t:0 "A New Universal Faith"
-  ecumenical_council.0003.desc:0 "The great council has reconciled the ancient divides of Christendom. Those who have always sought unity now see their dream realized. You are invited to embrace the [GetFaithByKey('universal_church').GetAdjective] Church."
-  ecumenical_council.0003.a:0 "I shall join this new Universal Church."
-  ecumenical_council.0003.b:0 "My beliefs are unshaken by this posturing."
+  ecumenical_council.0202.t:0 "A New Universal Faith?"
+  ecumenical_council.0202.desc:0 "A grand council claims to have united Christendom under one creed. The decrees sound foreign to your traditions. Will you accept this Universal Church as the true heir of the faith?"
+  ecumenical_council.0202.a:0 "Truly this can only be the work of Jesus Christ."
+  ecumenical_council.0202.b:0 "The fools are united in error."
 
-  ecumenical_council.0004.t:0 "A New Universal Faith?"
-  ecumenical_council.0004.desc:0 "A grand council claims to have united Christendom under one creed. The decrees sound foreign to your traditions. Will you accept this Universal Church as the true heir of the faith?"
-  ecumenical_council.0004.a:0 "Truly this can only be the work of Jesus Christ."
-  ecumenical_council.0004.b:0 "The fools are united in error."
-
-  ecumenical_council.0005.t:0 "The Christians Claim Unity"
-  ecumenical_council.0005.desc:0 "Across the lands of the Christians, a great council has declared a new Universal Church. The priests speak of unity and renewal; of another power rising in the west."
-  ecumenical_council.0005.a:0 "Bah! A bold claim, sure to falter."
+  ecumenical_council.0203.t:0 "The Christians Claim Unity"
+  ecumenical_council.0203.desc:0 "Across the lands of the Christians, a great council has declared a new Universal Church. The priests speak of unity and renewal; of another power rising in the west."
+  ecumenical_council.0203.a:0 "Bah! A bold claim, sure to falter."
 
   ecumenical_papacy_approval:0 "[GetTitleByKey('k_papal_state').GetHolder.GetTitledFirstName] must have at least #V 75#! [opinion|E] of you (#V 100#! if [GetTitleByKey('k_papal_state').GetHolder.GetTitledFirstName] is [GetTrait('zealous').GetName(GetNullCharacter)])."
 
@@ -44,3 +39,65 @@
 
   fervor_gain_mended_schism_ecumenical:0 "The Great Ecumenical Council has mended the East-West Schism and united Christendom."
   fervor_loss_mended_schism_ecumenical:0 "Holdouts from the unification of Christendom."
+
+  # 0001 - Opening of the Council
+  ecumenical_council.0001.t:0 "The Great Council Convenes"
+  ecumenical_council.0001.desc:0 "Bishops, abbots, patriarchs, and theologians from across Christendom have gathered under one roof in Jerusalem. The air hums with both tension and hope. Soon, the Church shall once again speak with one voice, if only we can agree on what that voice shall say."
+  ecumenical_council.0001.a:0 "‘For where two or three are gathered together in my name, there am I in the midst of them.’ - Matthew 18:20"
+
+  # 0100 - Debate 1: Religious Attitude
+  ecumenical_council.0100.t:0 "The Question of the Stranger"
+  ecumenical_council.0100.desc:0 "Our own faith shall be united, yet throughout the world there are countless souls who do not follow Christ. The council must decide: how shall we regard those who still do not know Him?"
+  ecumenical_council.0100.a:0 "‘Whoever is not with me is against me.’ - Matthew 12:30"
+  ecumenical_council.0100.b:0 "‘Forgive them, for they know not what they do.’ - Luke 23:34"
+  ecumenical_council.0100.c:0 "‘In my Father’s house are many mansions.’ - John 14:2"
+
+  # 0101 - Ecumenism
+  ecumenical_council.0101.t:0 "The Matter of the Defiant"
+  ecumenical_council.0101.desc:0 "Those who were once called brethren now reject the unity of the Church. Shall we strike their names from the rolls, or extend them grace?"
+  ecumenical_council.0101.a:0 "‘My hand will be against the prophets who see false visions and utter lying divinations.’ - Ezekiel 13:9"
+  ecumenical_council.0101.b:0 "‘Let both grow together until the harvest.’ - Matthew 13:30"
+
+  # 0102 - Divorce
+  ecumenical_council.0102.t:0 "The Matter of Divorce"
+  ecumenical_council.0102.desc:0 "Moses allowed divorce for the hard-hearted. Jesus forbade it except for adultery. There are practical benefits. What shall we do about divorce?"
+  ecumenical_council.0102.a:0 "‘What God hath joined together, let no man put asunder.’ - Mark 10:9"
+  ecumenical_council.0102.b:0 "‘Moses suffered to write a bill of divorcement.’ - Mark 10:4"
+
+  # 0103 - Bastardization
+  ecumenical_council.0103.t:0 "The Matter of Illegitimacy"
+  ecumenical_council.0103.desc:0 "Many annointed rulers have sired illegitimate children out of wedlock. Will children of these illicit unions be barred from inheritance and honor, or do we forgive the sins of their parents?"
+  ecumenical_council.0103.a:0 "‘The son shall not bear the iniquity of the father.’ - Ezekiel 18:20"
+  ecumenical_council.0103.b:0 "‘A bastard shall not enter into the congregation of the LORD.’ - Deuteronomy 23:2"
+
+  # 0104 - Consanguinity
+  ecumenical_council.0104.t:0 "The Matter of Kinship"
+  ecumenical_council.0104.desc:0 "Where does holy kinship become forbidden union? The nobles press for exceptions; the law calls for limits."
+  ecumenical_council.0104.a:0 "‘None of you shall approach to any that is near of kin.’ - Leviticus 18:6"
+  ecumenical_council.0104.b:0 "‘It is not good that the man should be alone.’ - Genesis 2:18"
+  ecumenical_council.0104.c:0 "‘Love covereth all sins.’ - Proverbs 10:12"
+
+  # 0105 - Adultery
+  ecumenical_council.0105.t:0 "The Matter of Adultery"
+  ecumenical_council.0105.desc:0 "The council now turns to matters of adultery. Some argue that men and women should face equal consequences for adultery, while others call for differentiated treatment. How will the Church define sin and justice in this matter?"
+  ecumenical_council.0105.a:0 "‘Whosoever looketh on a woman to lust... hath committed adultery already.’ - Matthew 5:28"
+  ecumenical_council.0105.b:0 "‘Let him that is without sin cast the first stone.’ - John 8:7"
+  ecumenical_council.0105.c:0 "‘Judge not, that ye be not judged.’ - Matthew 7:1"
+
+  # 0106 - Priest Function
+  ecumenical_council.0106.t:0 "The Matter of Priests"
+  ecumenical_council.0106.desc:0 "The role of the clergy comes to the forefront of discussion. Should priests collect tithes and manage wealth? Or devote themselves to alms and guidance among the faithful?."
+  ecumenical_council.0106.a:0 "‘Render unto Caesar the things which are Caesar’s, and unto God the things which are God's.’ - Matthew 22:21"
+  ecumenical_council.0106.b:0 "‘Blessed are the peacemakers.’ - Matthew 5:9"
+
+  # 0107 - Clerical Marriage
+  ecumenical_council.0107.t:0 "The Matter of Celibacy"
+  ecumenical_council.0107.desc:0 "Should those who minister to God be bound to celibacy, or may priests marry and serve both altar and home?"
+  ecumenical_council.0107.a:0 "‘It is good for a man not to touch a woman.’ - 1 Corinthians 7:1"
+  ecumenical_council.0107.b:0 "‘Marriage is honourable in all.’ - Hebrews 13:4"
+
+  # 0108 - Spreading the Faith
+  ecumenical_council.0108.t:0 "The Matter of Evangelism"
+  ecumenical_council.0108.desc:0 "Out first major order of business is to decide how we shall spread our faith to the nations. Some argue to continue the work of the sword, arguing that our success in reclaiming the Holy Land proves its holiness before God. Others say that we should put down our weapons and return to spreading the faith by the way of the Apostles."
+  ecumenical_council.0108.a:0 "Take nothing for the journey except a staff..."
+  ecumenical_council.0108.b:0 "I did not come to bring peace, but a sword..."
