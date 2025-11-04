@@ -115,7 +115,7 @@ doctrine_core_tenets = {
 	}
 
     tenet_universal_catechism = { # custom potential tenet for universal_church
-		icon = core_tenet_universal_catechism
+		icon = core_tenet_alexandrian_catechism
 
 		piety_cost = {
 			value = faith_tenet_cost_massive
@@ -129,6 +129,7 @@ doctrine_core_tenets = {
 			monthly_learning_lifestyle_xp_gain_mult = 0.1
 			learning_per_piety_level = 1
 			cultural_head_fascination_mult = 0.1
+			same_faith_opinion = 5
 		}
 
 		traits = {
@@ -137,7 +138,7 @@ doctrine_core_tenets = {
 	}
 
 	tenet_faith_triumphant = { # custom potential tenet for universal_church
-		icon = core_tenet_armed_pilgrimages
+		icon = core_tenet_unrelenting_faith
 
 		piety_cost = {
 			value = faith_tenet_cost_massive
@@ -153,12 +154,14 @@ doctrine_core_tenets = {
 
 		character_modifier = {
 			prowess_per_piety_level = 1
-			men_at_arms_maintenance = -0.05
+			faith_conversion_piety_cost_mult = 1 # If you're so sure why are you trying to convert away?
+			tolerance_advantage_mod = 2
+			same_faith_opinion = 10 # must be something good in you if you share my unrelenting convictions
 		}
 
 		traits = {
-			virtues = { brave }
-			sins = { craven }
+			virtues = { zealous }
+			sins = { cynical }
 		}
 	}
 
