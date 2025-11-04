@@ -106,7 +106,7 @@ doctrine_core_tenets = {
 
 		character_modifier = {
 			monthly_learning_lifestyle_xp_gain_mult = 0.1
-			learning_per_piety_level = 2
+			learning_per_stress_level = 2
 		}
 
 		traits = {
@@ -133,7 +133,8 @@ doctrine_core_tenets = {
 		}
 
 		traits = {
-			virtues = { scholar }
+			virtues = { scholar diligent }
+			sins = { lazy }
 		}
 	}
 
@@ -148,11 +149,8 @@ doctrine_core_tenets = {
 			always = no
 		}
 
-		parameters = {
-			cheaper_holy_wars_active = yes
-		}
-
 		character_modifier = {
+			stress_loss_per_piety_level = 0.05
 			prowess_per_piety_level = 1
 			faith_conversion_piety_cost_mult = 1 # If you're so sure why are you trying to convert away?
 			tolerance_advantage_mod = 2
