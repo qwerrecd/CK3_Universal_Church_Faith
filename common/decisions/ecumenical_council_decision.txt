@@ -199,6 +199,61 @@
     }
 }
 
+establish_new_church_leader_decision { # a new leader emerges
+    picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
+	}
+    desc = establish_new_church_leader_decision_desc
+    selection_tooltip = establish_new_church_leader_decision_tooltip
+    decision_group_type = major
+    ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 240
+		empire = 120
+		hegemony = 120
+	}
+
+    is_shown = {
+        has_character_flag = held_ecumenical_council
+        NOT = { exists = title:k_apostolic_see.holder }
+    }
+
+    is_valid = {
+        faith = faith:universal_church
+        completely_controls = title:k_jerusalem
+    }
+
+    is_valid_showing_failures_only = {
+		is_landed = yes
+		is_capable_adult = yes
+		is_imprisoned = no
+		top_liege = this
+	}
+
+
+    effect = {
+        custom_tooltip = establish_new_church_leader_decision_effect_tooltip
+        trigger_event = {
+            id = ecumenical_council.0300
+        }
+    }
+
+    ai_potential = {
+        faith = faith:universal_church
+        highest_held_title_tier > tier_duchy
+        NOT = { faith = { exists = religious_head } }
+        completely_controls = title:k_jerusalem
+    }
+
+    ai_will_do = {
+        base = 100
+    }
+
+    confirm_text = establish_new_church_leader_decision_confirm
+}
+
 dismantle_papacy_decision = { #For Muslims and Pagans.
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"

@@ -52,6 +52,9 @@
 			}
 		}
 	}
+	hidden_effect = {
+		add_character_flag = held_ecumenical_council
+	}
 
 	set_nickname_effect = { NICKNAME = nick_the_ecumenist }
 }

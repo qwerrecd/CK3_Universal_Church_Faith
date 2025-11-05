@@ -6,6 +6,13 @@
   hold_ecumenical_council_decision_confirm:0 "The time for unity is now!"
   hold_ecumenical_council_decision_effect_tooltip:0 "The disparate Christian faiths will come together for a council dedicated to ending the schisms dividing Christendom."
 
+  establish_new_church_leader_decision:0 "Establish the Apostolic See"
+  establish_new_church_leader_decision_desc:0 "The Universal Church stands united, yet lacks a shepherd to guide the faithful and safeguard doctrine. By divine right and the Council’s authority, we may now restore the Apostolic See and appoint its first Apostle."
+  establish_new_church_leader_decision_tooltip:0 "Convene the remaining Council delegates to appoint a spiritual leader for the Universal Church."
+  establish_new_church_leader_decision_confirm:0 "Restore the Apostolic See."
+  establish_new_church_leader_decision_effect_tooltip:0 "Find a worthy shepherd for the newly reunited flock of Christendom."
+
+
   ecumenical_council.0200.t:0 "The Great Ecumenical Council Concludes"
   ecumenical_council.0200.desc:0 "The five ancient sees stand reclaimed by wider Christendom. The emperors of East and West lend their blessing, and the heads of the ancient churches have gathered in assembly. After months of debate, the Universal Church is proclaimed."
   ecumenical_council.0200.a:0 "Let the Universal Church be born!"
@@ -39,6 +46,7 @@
 
   fervor_gain_mended_schism_ecumenical:0 "The Great Ecumenical Council has mended the East-West Schism and united Christendom."
   fervor_loss_mended_schism_ecumenical:0 "Holdouts from the unification of Christendom."
+  fervor_gain_new_apostle:0 "A new shepherd of the church has been annointed."
 
   # 0001 - Opening of the Council
   ecumenical_council.0001.t:0 "The Great Council Convenes"
@@ -107,3 +115,8 @@
   ecumenical_council.0109.desc:0 "As debate nears its end within the council halls, two visions of maintaining the newly won unity of the Church emerge. Some argue that understanding and instruction will unify believers. Others claim that certainty and resolve are the true common pillars of faith. Shall our vaunted unity come from shared reason? Or from shared conviction?"
   ecumenical_council.0109.a:0 "'Come now, and let us reason together, says the Lord.' - Isaiah 1:18"
   ecumenical_council.0109.b:0 "'Be on your guard; stand firm in the faith; be courageous; be strong.' - Matthew 10:34"
+
+  # 0300 - A new leader of the faith
+  ecumenical_council.0300.t:0 "A Shepherd for the Universal Church"
+  ecumenical_council.0300.desc:0 "The Council’s great is nearly completed, but one matter remains. Who will guide this nascent Universal Church? The faithful are united in doctrine, yet unity demands a shepherd to guard it.\n\n“Feed my sheep,” the Lord said to Peter. So too must we now find one fit to bear that charge."
+  ecumenical_council.0300.a:0 "The Lord be with him as he guides the flock."
