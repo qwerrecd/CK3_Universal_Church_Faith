@@ -58,6 +58,7 @@
   ecumenical_council.0100.desc:0 "Our own faith shall be united, yet throughout the world there are countless souls who do not follow Christ. The council must decide: how shall we regard those who still do not know Him?"
   ecumenical_council.0100.a:0 "‘Whoever is not with me is against me.' - Matthew 12:30"
   ecumenical_council.0100.b:0 "‘Forgive them, for they know not what they do.' - Luke 23:34"
+  ecumenical_council.0100.b.tt:0 "[GetFaithByKey('universal_church').GetName] will retain the [GetFaithDoctrine('doctrine_pluralism_righteous').GetBaseName] doctrine."
   ecumenical_council.0100.c:0 "‘In my Father's house are many mansions.' - John 14:2"
 
   # 0101 - Ecumenism
