@@ -133,7 +133,7 @@ doctrine_core_tenets = {
 		}
 
 		traits = {
-			virtues = { scholar diligent }
+			virtues = { theologian diligent }
 			sins = { lazy }
 		}
 	}
