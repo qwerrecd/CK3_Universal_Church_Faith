@@ -1,4 +1,4 @@
-﻿version="0.2"
+﻿version="0.9"
 tags={
 	"1.18 'Crane'"
 	"Religion"
