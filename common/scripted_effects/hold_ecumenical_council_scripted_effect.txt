@@ -33,6 +33,7 @@
 	}
 
 	faith:universal_church = {
+		remove_variable = block_conversion_till_decision_taken
 		change_fervor = {
 			value = 25
 			desc = fervor_gain_mended_schism
