@@ -65,6 +65,7 @@
   ecumenical_council.0101.desc:0 "Those who were once called brethren now reject the unity of the Church. Shall we strike their names from the rolls, or extend them grace?"
   ecumenical_council.0101.a:0 "‘For such men are false apostles...' - 2 Corinthians 11:13"
   ecumenical_council.0101.b:0 "‘Let both grow together until the harvest.' - Matthew 13:30"
+  ecumenical_council.0101.b.tt:0 "[GetFaithByKey('universal_church').GetName] will retain the [GetFaithDoctrine('special_doctrine_ecumenical_christian').GetBaseName] doctrine."
 
   # 0102 - Divorce
   ecumenical_council.0102.t:0 "The Matter of Divorce"

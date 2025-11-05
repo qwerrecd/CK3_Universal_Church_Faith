@@ -109,6 +109,7 @@ ecumenical_council.0101 = {
             base = 40
         }
         name = ecumenical_council.0101.b
+        custom_tooltip = ecumenical_council.0101.b.tt
         trigger_event = { id = ecumenical_council.0102 days = {7 14} }
     }
 }
