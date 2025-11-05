@@ -1,4 +1,6 @@
-﻿k_apostolic_see = {
+﻿@always_primary_score = 1000
+
+k_apostolic_see = {
     color = { 0.7 0.7 0.7 }
     tier = kingdom
     definite_form = yes
