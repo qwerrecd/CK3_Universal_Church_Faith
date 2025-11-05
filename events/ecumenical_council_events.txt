@@ -53,7 +53,7 @@ ecumenical_council.0100 = {
 
     option = {
         ai_chance = {
-            base = 25
+            base = 15
         }
         name = ecumenical_council.0100.a
 		faith:universal_church = { remove_doctrine = doctrine_pluralism_righteous }
@@ -62,7 +62,7 @@ ecumenical_council.0100 = {
     }
     option = {
         ai_chance = {
-            base = 50
+            base = 70
         }
         name = ecumenical_council.0100.b
         faith:universal_church = { add_doctrine = doctrine_pluralism_righteous }
@@ -70,7 +70,7 @@ ecumenical_council.0100 = {
     }
     option = {
         ai_chance = {
-            base = 25
+            base = 15
         }
         name = ecumenical_council.0100.c
 		faith:universal_church = { remove_doctrine = doctrine_pluralism_righteous }
@@ -96,7 +96,7 @@ ecumenical_council.0101 = {
 
     option = {
         ai_chance = {
-            base = 50
+            base = 60
         }
         name = ecumenical_council.0101.a
         faith:universal_church = {
@@ -106,7 +106,7 @@ ecumenical_council.0101 = {
     }
     option = {
         ai_chance = {
-            base = 50
+            base = 40
         }
         name = ecumenical_council.0101.b
         trigger_event = { id = ecumenical_council.0102 days = {7 14} }
@@ -130,7 +130,7 @@ ecumenical_council.0102 = {
 
     option = {
         ai_chance = {
-            base = 50
+            base = 40
         }
         name = ecumenical_council.0102.a
 		faith:universal_church = { remove_doctrine = doctrine_divorce_approval }
@@ -139,7 +139,7 @@ ecumenical_council.0102 = {
     }
     option = {
         ai_chance = {
-            base = 50
+            base = 60
         }
         name = ecumenical_council.0102.b
         faith:universal_church = { add_doctrine = doctrine_divorce_approval }
@@ -164,7 +164,7 @@ ecumenical_council.0103 = {
 
     option = {
         ai_chance = {
-            base = 50
+            base = 20
         }
         name = ecumenical_council.0103.a
 		faith:universal_church = { remove_doctrine = doctrine_bastardry_legitimization }
@@ -173,7 +173,7 @@ ecumenical_council.0103 = {
     }
     option = {
         ai_chance = {
-            base = 50
+            base = 80
         }
         name = ecumenical_council.0103.b
         faith:universal_church = { add_doctrine = doctrine_bastardry_legitimization }
@@ -283,7 +283,7 @@ ecumenical_council.0106 = {
 
     option = {
         ai_chance = {
-            base = 50
+            base = 75
         }
         name = ecumenical_council.0106.a
         faith:universal_church = { add_doctrine = doctrine_clerical_function_taxation }
@@ -291,7 +291,7 @@ ecumenical_council.0106 = {
     }
     option = {
         ai_chance = {
-            base = 50
+            base = 25
         }
         name = ecumenical_council.0106.b
 		faith:universal_church = { remove_doctrine = doctrine_clerical_function_taxation }
@@ -317,7 +317,7 @@ ecumenical_council.0107 = {
 
     option = {
         ai_chance = {
-            base = 50
+            base = 70
         }
         name = ecumenical_council.0107.a
         faith:universal_church = { add_doctrine = doctrine_clerical_marriage_disallowed }
@@ -325,7 +325,7 @@ ecumenical_council.0107 = {
     }
     option = {
         ai_chance = {
-            base = 50
+            base = 30
         }
         name = ecumenical_council.0107.b
 		faith:universal_church = { remove_doctrine = doctrine_clerical_marriage_disallowed }
