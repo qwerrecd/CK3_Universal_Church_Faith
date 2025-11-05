@@ -1144,8 +1144,8 @@
 		universal_church = {
 			color = { 0.9 0.9 0.9 }
 			icon = nicene
-			religious_head = k_apostolic_see
 			graphical_faith = "catholic_gfx"
+			religious_head = k_apostolic_see
 			
 			holy_site = jerusalem
 			holy_site = constantinople
