@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
 
   hold_ecumenical_council_decision:0 "Convene the Great Ecumenical Council"
   hold_ecumenical_council_decision_desc:0 "Summon the bishops and patriarchs of Christendom to reconcile doctrine and establish a new Universal Church."
@@ -116,7 +116,7 @@
   ecumenical_council.0109.t:0 "The Nature of True Unity"
   ecumenical_council.0109.desc:0 "As debate nears its end within the council halls, two visions of maintaining the newly won unity of the Church emerge. Some argue that understanding and instruction will unify believers. Others claim that certainty and resolve are the true common pillars of faith. Shall our vaunted unity come from shared reason? Or from shared conviction?"
   ecumenical_council.0109.a:0 "'Come now, and let us reason together, says the Lord.' - Isaiah 1:18"
-  ecumenical_council.0109.b:0 "'Be on your guard; stand firm in the faith; be courageous; be strong.' - Matthew 10:34"
+  ecumenical_council.0109.b:0 "'Be on your guard; stand firm in the faith; be courageous; be strong.' - 1 Corinthians 16:13"
 
   # 0300 - A new leader of the faith
   ecumenical_council.0300.t:0 "A Shepherd for the Universal Church"
