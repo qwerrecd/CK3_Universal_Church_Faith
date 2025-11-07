@@ -1,4 +1,4 @@
-﻿
+
 namespace = ecumenical_council
 # A Grand Ecumenical Council is called
 
@@ -45,10 +45,10 @@ ecumenical_council.0100 = {
         character = scope:council_host
         animation = personality_zealous
     }
-	right_portrait = {
-		character = title:k_papal_state.holder
-		animation = personality_zealous
-	}
+		right_portrait = {
+			character = title:k_papal_state.holder
+			animation = personality_zealous
+		}
     theme = realm
 
     option = {
@@ -85,13 +85,13 @@ ecumenical_council.0101 = {
     title = ecumenical_council.0101.t
     desc = ecumenical_council.0101.desc
     left_portrait = {
-        character = scope:council_host
+        character = title:k_orthodox.holder
         animation = personality_compassionate
     }
-	right_portrait = {
-		character = title:k_papal_state.holder
-		animation = personality_forgiving
-	}
+		right_portrait = {
+			character = scope:council_host
+			animation = personality_forgiving
+		}
     theme = realm
 
     option = {
@@ -120,13 +120,13 @@ ecumenical_council.0102 = {
     title = ecumenical_council.0102.t
     desc = ecumenical_council.0102.desc
     left_portrait = {
-        character = title:k_orthodox.holder
+        character = title:k_papal_state.holder
         animation = personality_honorable
     }
-	right_portrait = {
-		character = title:k_papal_state.holder
-		animation = personality_rational
-	}
+		right_portrait = {
+			character = title:k_orthodox.holder
+			animation = personality_rational
+		}
     theme = realm
 
     option = {
@@ -154,13 +154,13 @@ ecumenical_council.0103 = {
     title = ecumenical_council.0103.t
     desc = ecumenical_council.0103.desc
     left_portrait = {
-        character = scope:council_host
+        character = title_d_coptic_papacy.holder
         animation = personality_compassionate
     }
-	right_portrait = {
-		character = title:k_orthodox.holder
-		animation = personality_callous
-	}
+		right_portrait = {
+			character = title:k_papal_state.holder
+			animation = personality_callous
+		}
     theme = realm
 
     option = {
@@ -188,13 +188,13 @@ ecumenical_council.0104 = {
     title = ecumenical_council.0104.t
     desc = ecumenical_council.0104.desc
     left_portrait = {
-        character = title:d_coptic_papacy.holder
+        character = scope:council_host
         animation = personality_rational
     }
-	right_portrait = {
-		character = title:k_papal_state.holder
-		animation = personality_cynical
-	}
+		right_portrait = {
+			character = title:k_orthodox.holder
+			animation = personality_cynical
+		}
     theme = realm
 
     option = {
@@ -231,7 +231,7 @@ ecumenical_council.0105 = {
     title = ecumenical_council.0105.t
     desc = ecumenical_council.0105.desc
     left_portrait = {
-        character = title:k_orthodox.holder
+        character = title:k_papal_state.holder
         animation = personality_vengeful
     }
 	right_portrait = {
@@ -273,13 +273,13 @@ ecumenical_council.0106 = {
     title = ecumenical_council.0106.t
     desc = ecumenical_council.0106.desc
     left_portrait = {
-        character = scope:council_host
+        character = title:d_coptic_papacy.holder
         animation = personality_zealous
     }
-	right_portrait = {
-		character = title:d_coptic_papacy.holder
-		animation = personality_rational
-	}
+		right_portrait = {
+			character = scope:council_host
+			animation = personality_rational
+		}
     theme = realm
 
     option = {
@@ -307,13 +307,13 @@ ecumenical_council.0107 = {
     title = ecumenical_council.0107.t
     desc = ecumenical_council.0107.desc
     left_portrait = {
-        character = title:k_orthodox.holder
+        character = title:k_papal_state.holder
         animation = personality_rational
     }
-	right_portrait = {
-		character = title:k_papal_state.holder
-		animation = personality_zealous
-	}
+		right_portrait = {
+			character = title:k_papal_state.holder
+			animation = personality_zealous
+		}
     theme = realm
 
     option = {
@@ -341,11 +341,11 @@ ecumenical_council.0108 = {
 	title = ecumenical_council.0108.t
 	desc = ecumenical_council.0108.desc
 	left_portrait = {
-        character = scope:council_host
+        character = title:k_papal_state.holder
         animation = personality_zealous
     }
 	right_portrait = {
-		character = title:k_papal_state.holder
+		character = title:d_coptic_papacy.holder
 		animation = personality_zealous
 	}
 	theme = realm
@@ -379,15 +379,15 @@ ecumenical_council.0108 = {
 }
 
 ecumenical_council.0109 = {
-   type = character_event
+  type = character_event
 	title = ecumenical_council.0109.t
 	desc = ecumenical_council.0109.desc
 	left_portrait = {
-        character = title:d_coptic_papacy.holder
-        animation = personality_zealous
-    }
+			character = title:k_orthodox.holder
+			animation = personality_zealous
+	}
 	right_portrait = {
-		character = title:k_papal_state.holder
+		character = title:d_coptic_papacy.holder
 		animation = personality_zealous
 	}
 	theme = realm
