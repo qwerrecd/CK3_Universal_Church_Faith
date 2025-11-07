@@ -1,4 +1,4 @@
-hold_ecumenical_council_scripted_effect = {
+﻿hold_ecumenical_council_scripted_effect = {
 	every_ruler = { #Notify members of other ecumenical Christian branches that the council has come to an agreement.
 		limit = {
 			faith.religion = root.faith.religion
