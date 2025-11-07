@@ -12,7 +12,10 @@
   establish_new_church_leader_decision_confirm:0 "Restore the Apostolic See."
   establish_new_church_leader_decision_effect_tooltip:0 "Find a worthy shepherd for the newly reunited flock of Christendom."
 
-  create_universal_holy_order_decision_confirm:0 "Found Universal Holy Order"
+  create_universal_holy_order_decision:0 "Found Universal Holy Order"
+  create_universal_holy_order_decision_desc:0 "As the stubbornness of the old holy orders has led them astray, we must found a new holy order to defend our faith."
+  create_universal_holy_order_decision_confirm:0 "For the defense of the faith and the faithful!"
+  create_universal_holy_order_decision_tooltip:0 "Create a new holy order to defend the unified faith."
   create_universal_holy_order_decision_effect_message:0 "With the subsidies of the faithful and the support of the Apostolic See, a [holy_order|E] of your [faith|E] will be founded for much cheaper than usual\n$EFFECT_LIST_BULLET$You become the order's [holy_order_patron|E].\n$EFFECT_LIST_BULLET$You will select a non [county|E] [capital|E] [barony|E] as the order's Headquarters."
 
   ecumenical_council.0200.t:0 "The Great Ecumenical Council Concludes"

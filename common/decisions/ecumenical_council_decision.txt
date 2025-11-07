@@ -344,6 +344,8 @@ create_universal_holy_order_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
 	}
+	desc = create_universal_holy_order_decision_desc
+    selection_tooltip = create_universal_holy_order_decision_tooltip
 	decision_group_type = major
 
 	ai_goal = yes
