@@ -65,7 +65,7 @@ ecumenical_council.0100 = {
             base = 70
         }
         name = ecumenical_council.0100.b
-        custom_description = ecumenical_council.0100.b.tt
+        custom_tooltip = ecumenical_council.0100.b.tt
         trigger_event = { id = ecumenical_council.0101 days = {7 14} }
     }
     option = {
