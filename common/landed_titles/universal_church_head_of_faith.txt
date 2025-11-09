@@ -2,20 +2,14 @@
 
 k_apostolic_see = {
     color = { 0.7 0.7 0.7 }
-    tier = kingdom
     definite_form = yes
 	ruler_uses_title_name = no
 	can_use_nomadic_naming = no
-    landless = yes    
-    
-    capital = c_jerusalem
-                    
-    religious_head = yes              
-    creation_requires_capital = no     
-    visible = yes                      
-    destroy_if_invalid = yes           
+	landless = yes
 
-    ai_primary_priority = {
+	capital = c_jerusalem
+
+	ai_primary_priority = {
 		add = @always_primary_score
 	}
 
@@ -24,8 +18,5 @@ k_apostolic_see = {
 	always_follows_primary_heir = yes
 	de_jure_drift_disabled = yes
 	can_use_nomadic_naming = no
-
-    name = universal_church_religious_head_title_name
-    adjective = universal_church_religious_head_title
 
 }

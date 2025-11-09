@@ -8,7 +8,9 @@ set_universal_church_locked = {
 	effect = {
 		faith:universal_church = {
 			set_variable = { name = block_conversion_till_decision_taken }
-			set_coa = k_apostolic_see
+		}
+		title:k_apostolic_see = {
+			set_coa = k_apostolic_see_coa
 		}
 	}
 }
