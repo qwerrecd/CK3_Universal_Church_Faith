@@ -154,7 +154,7 @@ ecumenical_council.0103 = {
     title = ecumenical_council.0103.t
     desc = ecumenical_council.0103.desc
     left_portrait = {
-        character = title_d_coptic_papacy.holder
+        character = title:d_coptic_papacy.holder
         animation = personality_compassionate
     }
 		right_portrait = {
