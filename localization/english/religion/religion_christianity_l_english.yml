@@ -77,13 +77,21 @@
  christianity_water_god_name_possessive:0 "$christianity_health_god_name_possessive$"
 
  #Universal Church Localization
- universal_church:0 "Universal Church"
+ universal_church:0 "[GetFaithByKey('universal_church').Custom('universal_church_name')]"
  universal_church_adj:0 "Universal Christian"
  universal_church_adherent:0 "Christian"
  universal_church_adherent_plural:0 "Christians"
  universal_church_desc:0 "An ecumenical revival of the unified church at the time of Jesus, the Universal Church seeks to bring together all Christians; emphasizing shared beliefs, resolving doctrinal differences, and promoting unity and communion under Jesus above all else."
  universal_church_religious_head_title:0 "Apostle"
  universal_church_religious_head_title_name:0 "Apostleship"
+
+ # alternate names
+ # universal_church
+ universal_church_orthodox:0 "United Orthodoxy"
+ universal_church_catholic:0 "United Catholicism"
+ universal_church_coptic:0 "United Coptic"
+ universal_church_apostolic:0 "United Apostolic"
+ universal_church_default:0 "Universal Church"
 
  #Catholic-Group Faiths
  catholic:0 "Catholicism"

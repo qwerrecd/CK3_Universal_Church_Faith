@@ -188,6 +188,43 @@
 				name = unavailable_unique_decisions
 				target = flag:flag_mended_great_schism
 			}
+			if = {
+				limit = {
+					root.faith = faith:catholic
+				}
+				set_global_variable = {
+					name = catholic_mended_schism
+					value = yes
+				}
+			}
+			else_if = {
+				limit = {
+					root.faith = faith:orthodox
+				}
+				set_global_variable = {
+					name = orthodox_mended_schism
+					value = yes
+				}	
+			}
+			else_if = {
+				limit = {
+					root.faith = faith:coptic
+				}
+				set_global_variable = {
+					name = coptic_mended_schism
+					value = yes
+				}	
+			}
+			else_if = {
+				limit = {
+					root.faith = faith:armenian_apostolic
+				}
+				set_global_variable = {
+					name = apostolic_mended_schism
+					value = yes
+				}	
+			}
+			else = { }
 		}
     }
 
@@ -352,16 +389,16 @@ create_universal_holy_order_decision = {
 
 	is_shown = {
 		is_landed = yes
-    NOR = {
-			faith != faith:universal_church # no converting away >:( that was the whole point
-			faith = {
-				any_faith_holy_order = { # only one holy order allowed
-					holy_order_patron = root
-					save_temporary_scope_as = order
+		NOR = {
+				faith != faith:universal_church # no converting away >:( that was the whole point
+				faith = {
+					any_faith_holy_order = { # only one holy order allowed
+						holy_order_patron = root
+						save_temporary_scope_as = order
+					}
 				}
 			}
-		}
-    has_character_flag = held_ecumenical_council # only the one who held the council can found the order
+		has_character_flag = held_ecumenical_council # only the one who held the council can found the order
 		exists = faith.religious_head # comes after new religious head is created
 	}
 

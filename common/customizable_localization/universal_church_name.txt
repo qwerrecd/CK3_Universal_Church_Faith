@@ -1,0 +1,23 @@
+﻿universal_church_name = {
+    type = faith
+	text = { # orthodox name
+		trigger = { has_global_variable = orthodox_mended_schism }
+		localization_key = universal_church_orthodox
+	}
+	text = { # coptic name
+		trigger = { has_global_variable = coptic_mended_schism }
+		localization_key = universal_church_coptic
+	}
+	text = { # apostolic name
+		trigger = { has_global_variable = apostolic_mended_schism }
+		localization_key = universal_church_apostolic
+	}
+	text = { # catholic name
+		trigger = { has_global_variable = catholic_mended_schism }
+		localization_key = universal_church_catholic
+	}
+	text = { # default name
+		localization_key = universal_church_default
+		fallback = yes
+	}
+}
