@@ -175,7 +175,7 @@
 		top_liege = this
 	}
 
-	effect = { 
+	effect = {
         add_piety = 1000
         gain_holy_legend_seed_tooltip_effect = yes
         custom_tooltip = hold_ecumenical_council_decision_effect_tooltip
@@ -190,7 +190,7 @@
 			}
 			if = {
 				limit = {
-					root.faith = faith:catholic
+					faith = faith:catholic
 				}
 				set_global_variable = {
 					name = catholic_mended_schism
@@ -199,7 +199,7 @@
 			}
 			else_if = {
 				limit = {
-					root.faith = faith:orthodox
+					faith = faith:orthodox
 				}
 				set_global_variable = {
 					name = orthodox_mended_schism
@@ -208,7 +208,7 @@
 			}
 			else_if = {
 				limit = {
-					root.faith = faith:coptic
+					faith = faith:coptic
 				}
 				set_global_variable = {
 					name = coptic_mended_schism
@@ -217,14 +217,13 @@
 			}
 			else_if = {
 				limit = {
-					root.faith = faith:armenian_apostolic
+					faith = faith:armenian_apostolic
 				}
 				set_global_variable = {
 					name = apostolic_mended_schism
 					value = yes
 				}	
 			}
-			else = { }
 		}
     }
 
