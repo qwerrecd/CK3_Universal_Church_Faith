@@ -21,10 +21,10 @@
   ecumenical_council.0200.t:0 "The Great Ecumenical Council Concludes"
   ecumenical_council.0200.desc:0 "The five ancient sees stand reclaimed by wider Christendom. The emperors of East and West lend their blessing, and the heads of the ancient churches have gathered in assembly. After months of debate, the Universal Church is proclaimed."
   ecumenical_council.0200.a:0 "Let the Universal Church be born!"
-  ecumenical_council.0200.a.tt:0 "The [GetGlobalVariable('new_faith').GetValue.GetAdjective] Church is founded, and all of Christendom is invited to join."
+  ecumenical_council.0200.a.tt:0 "The [GetGlobalVariable('new_faith').Faith.GetAdjective] Church is founded, and all of Christendom is invited to join."
 
   ecumenical_council.0201.t:0 "A New Universal Faith"
-  ecumenical_council.0201.desc:0 "The great council has reconciled the ancient divides of Christendom. Those who have always sought unity now see their dream realized. You are invited to embrace the [GetGlobalVariable('new_faith').GetValue.GetAdjective] Church."
+  ecumenical_council.0201.desc:0 "The great council has reconciled the ancient divides of Christendom. Those who have always sought unity now see their dream realized. You are invited to embrace the [GetGlobalVariable('new_faith').Faith.GetAdjective] Church."
   ecumenical_council.0201.a:0 "I shall join this new Universal Church."
   ecumenical_council.0201.b:0 "My beliefs are unshaken by this posturing."
 
@@ -63,7 +63,7 @@
   ecumenical_council.0100.desc:0 "Our own faith shall be united, yet throughout the world there are countless souls who do not follow Christ. The council must decide: how shall we regard those who still do not know Him?"
   ecumenical_council.0100.a:0 "‘Whoever is not with me is against me.' - Matthew 12:30"
   ecumenical_council.0100.b:0 "‘Forgive them, for they know not what they do.' - Luke 23:34"
-  ecumenical_council.0100.b.tt:0 "[GetGlobalVariable('new_faith').GetValue.GetAdjective] will retain the [GetFaithDoctrine('doctrine_pluralism_righteous').GetBaseName] doctrine."
+  ecumenical_council.0100.b.tt:0 "[GetGlobalVariable('new_faith').Faith.GetAdjective] will retain the [GetFaithDoctrine('doctrine_pluralism_righteous').GetBaseName] doctrine."
   ecumenical_council.0100.c:0 "‘In my Father's house are many mansions.' - John 14:2"
 
   # 0101 - Ecumenism
@@ -71,7 +71,7 @@
   ecumenical_council.0101.desc:0 "Those who were once called brethren now reject the unity of the Church. Shall we strike their names from the rolls, or extend them grace?"
   ecumenical_council.0101.a:0 "‘For such men are false apostles...' - 2 Corinthians 11:13"
   ecumenical_council.0101.b:0 "‘Let both grow together until the harvest.' - Matthew 13:30"
-  ecumenical_council.0101.b.tt:0 "[GetGlobalVariable('new_faith').GetValue.GetAdjective] will retain the [GetFaithDoctrine('special_doctrine_ecumenical_christian').GetBaseName] doctrine."
+  ecumenical_council.0101.b.tt:0 "[GetGlobalVariable('new_faith').Faith.GetAdjective] will retain the [GetFaithDoctrine('special_doctrine_ecumenical_christian').GetBaseName] doctrine."
 
   # 0102 - Divorce
   ecumenical_council.0102.t:0 "The Matter of Divorce"

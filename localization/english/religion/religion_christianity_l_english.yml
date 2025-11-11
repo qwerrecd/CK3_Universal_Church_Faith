@@ -86,9 +86,8 @@
  unified_church_religious_head_title_name:0 "Apostleship"
 
  # alternate names
- # universal_church
  unified_church_catholic:0 "Unified Catholicism"
- unified_church_catholic_adj:0 "Unified Christian"
+ unified_church_catholic_adj:0 "Unified Catholic"
  unified_church_catholic_adherent:0 "Christian"
  unified_church_catholic_adherent_plural:0 "Christians"
  unified_church_catholic_desc:0 "Born from a Great Council in the Holy Land, the Holy Church of Christ represents a vision of restored unity among Christians. Rooted in the Catholic tradition yet embracing reconciliation with all branches of the faith, it calls believers to lay aside past divisions and stand together in shared creed, sacrament, and devotion to Christ."
@@ -96,7 +95,7 @@
  unified_church_catholic_religious_head_title_name:0 "Apostleship"
 
  unified_church_orthodox:0 "Unified Orthodoxy"
- unified_church_orthodox_adj:0 "Unified Christian"
+ unified_church_orthodox_adj:0 "Unified Orthodox"
  unified_church_orthodox_adherent:0 "Christian"
  unified_church_orthodox_adherent_plural:0 "Christians"
  unified_church_orthodox_desc:0 "Arising from a Great Council dedicated to restoring communion among believers, the Union of the Faithful emphasizes shared apostolic faith and the balance of scripture, tradition, and council. It preserves the spiritual depth and liturgical heritage of Orthodoxy while welcoming all Christians into renewed unity under Christ."
@@ -104,7 +103,7 @@
  unified_church_orthodox_religious_head_title_name:0 "Apostleship"
 
  unified_church_coptic:0 "Unified Coptic Christianity"
- unified_church_coptic_adj:0 "Unified Christian"
+ unified_church_coptic_adj:0 "Unified Coptic"
  unified_church_coptic_adherent:0 "Christian"
  unified_church_coptic_adherent_plural:0 "Christians"
  unified_church_coptic_desc:0 "Drawing from the Alexandrian heritage and the wisdom of the desert fathers, the Church of the Living Word seeks to heal divisions through humility and shared devotion. It calls all Christians to rediscover unity through the life-giving Word of God and the grace of the Holy Spirit."
