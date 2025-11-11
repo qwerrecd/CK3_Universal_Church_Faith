@@ -193,8 +193,8 @@
 					faith = faith:catholic
 				}
 				set_global_variable = {
-					name = catholic_mended_schism
-					value = yes
+					name = new_faith
+					value = faith:unified_church_catholic
 				}
 			}
 			else_if = {
@@ -202,27 +202,36 @@
 					faith = faith:orthodox
 				}
 				set_global_variable = {
-					name = orthodox_mended_schism
-					value = yes
-				}	
+					name = new_faith
+					value = faith:unified_church_orthodox
+				}
 			}
 			else_if = {
 				limit = {
 					faith = faith:coptic
 				}
 				set_global_variable = {
-					name = coptic_mended_schism
-					value = yes
-				}	
+					name = new_faith
+					value = faith:unified_church_coptic
+				}
 			}
 			else_if = {
 				limit = {
 					faith = faith:armenian_apostolic
 				}
 				set_global_variable = {
-					name = apostolic_mended_schism
-					value = yes
-				}	
+					name = new_faith
+					value = faith:unified_church_apostolic
+				}
+			}
+			else = {
+				set_global_variable = {
+					name = new_faith
+					value = faith:unified_church
+				}
+			}
+			global_var:new_faith = {
+				remove_doctrine = doctrine_invisible_faith
 			}
 		}
     }
@@ -257,7 +266,7 @@ establish_new_church_leader_decision { # a new leader emerges
     }
 
     is_valid = {
-        faith = faith:universal_church
+        faith = global_var:new_faith
         completely_controls = title:k_jerusalem
     }
 
@@ -277,7 +286,7 @@ establish_new_church_leader_decision { # a new leader emerges
     }
 
     ai_potential = {
-        faith = faith:universal_church
+        faith = global_var:new_faith
         highest_held_title_tier > tier_duchy
         NOT = { faith = { exists = religious_head } }
         completely_controls = title:k_jerusalem
@@ -389,7 +398,7 @@ create_universal_holy_order_decision = {
 	is_shown = {
 		is_landed = yes
 		NOR = {
-				faith != faith:universal_church # no converting away >:( that was the whole point
+				faith != global_var:new_faith # no converting away >:( that was the whole point
 				faith = {
 					any_faith_holy_order = { # only one holy order allowed
 						holy_order_patron = root

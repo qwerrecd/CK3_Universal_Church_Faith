@@ -1141,7 +1141,7 @@
 			}
 		}
 
-		universal_church = {
+		unified_church = {
 			color = { 0.9 0.9 0.9 }
 			icon = nicene
 			graphical_faith = "catholic_gfx"
@@ -1155,6 +1155,7 @@
 
 			#Special Tolerance
 			doctrine = special_doctrine_ecumenical_christian
+			doctrine = doctrine_invisible_faith
 
 			#Tenets
 			doctrine = tenet_communion
@@ -1165,8 +1166,136 @@
 
 			localization = {
 				# Apostle
-				ReligiousHeadName = universal_church_religious_head_title
-				ReligiousHeadTitleName = universal_church_religious_head_title
+				ReligiousHeadName = unified_church_religious_head_title
+				ReligiousHeadTitleName = unified_church_religious_head_title
+			}
+
+        }
+
+		unified_church_catholic = {
+			color = { 0.9 0.9 0.9 }
+			icon = nicene
+			graphical_faith = "catholic_gfx"
+			religious_head = k_apostolic_see
+			
+			holy_site = jerusalem
+			holy_site = constantinople
+			holy_site = rome
+			holy_site = alexandria
+			holy_site = antioch
+
+			#Special Tolerance
+			doctrine = special_doctrine_ecumenical_christian
+			doctrine = doctrine_invisible_faith
+
+
+			#Tenets
+			doctrine = tenet_communion
+			doctrine = tenet_monasticism
+
+			#Coronation tradition
+			doctrine = doctrine_anointment_permitted
+
+			localization = {
+				# Apostle
+				ReligiousHeadName = unified_church_religious_head_title
+				ReligiousHeadTitleName = unified_church_religious_head_title
+			}
+
+        }
+
+		unified_church_orthodox = {
+			color = { 0.9 0.9 0.9 }
+			icon = nicene
+			graphical_faith = "orthodox_gfx"
+			religious_head = k_apostolic_see
+			
+			holy_site = jerusalem
+			holy_site = constantinople
+			holy_site = rome
+			holy_site = alexandria
+			holy_site = antioch
+
+			#Special Tolerance
+			doctrine = special_doctrine_ecumenical_christian
+			doctrine = doctrine_invisible_faith
+
+
+			#Tenets
+			doctrine = tenet_communion
+			doctrine = tenet_monasticism
+
+			#Coronation tradition
+			doctrine = doctrine_anointment_permitted
+
+			localization = {
+				# Apostle
+				ReligiousHeadName = unified_church_religious_head_title
+				ReligiousHeadTitleName = unified_church_religious_head_title
+			}
+
+        }
+
+		unified_church_coptic = {
+			color = { 0.9 0.9 0.9 }
+			icon = nicene
+			graphical_faith = "orthodox_gfx"
+			religious_head = k_apostolic_see
+			
+			holy_site = jerusalem
+			holy_site = constantinople
+			holy_site = rome
+			holy_site = alexandria
+			holy_site = antioch
+
+			#Special Tolerance
+			doctrine = special_doctrine_ecumenical_christian
+			doctrine = doctrine_invisible_faith
+
+
+			#Tenets
+			doctrine = tenet_communion
+			doctrine = tenet_monasticism
+
+			#Coronation tradition
+			doctrine = doctrine_anointment_permitted
+
+			localization = {
+				# Apostle
+				ReligiousHeadName = unified_church_religious_head_title
+				ReligiousHeadTitleName = unified_church_religious_head_title
+			}
+
+        }
+		
+		unified_church_apostolic = {
+			color = { 0.9 0.9 0.9 }
+			icon = nicene
+			graphical_faith = "orthodox_gfx"
+			religious_head = k_apostolic_see
+			
+			holy_site = jerusalem
+			holy_site = constantinople
+			holy_site = rome
+			holy_site = alexandria
+			holy_site = antioch
+
+			#Special Tolerance
+			doctrine = special_doctrine_ecumenical_christian
+			doctrine = doctrine_invisible_faith
+
+
+			#Tenets
+			doctrine = tenet_communion
+			doctrine = tenet_monasticism
+
+			#Coronation tradition
+			doctrine = doctrine_anointment_permitted
+
+			localization = {
+				# Apostle
+				ReligiousHeadName = unified_church_religious_head_title
+				ReligiousHeadTitleName = unified_church_religious_head_title
 			}
 
         }

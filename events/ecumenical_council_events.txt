@@ -32,7 +32,6 @@ ecumenical_council.0001 = {
 # The Council begins
 
 
-
 # I'm honestly just going on vibes and a vague aim for verisimilitude.
 # Does a debate on that doctrine that *feel* realistic within the context of my alt-history?
 
@@ -50,14 +49,16 @@ ecumenical_council.0100 = {
 			animation = personality_zealous
 		}
     theme = realm
-
     option = {
         ai_chance = {
             base = 15
         }
         name = ecumenical_council.0100.a
-		faith:universal_church = { remove_doctrine = doctrine_pluralism_righteous }
-        faith:universal_church = { add_doctrine = doctrine_pluralism_fundamentalist }
+
+        global_var:new_faith = {
+            remove_doctrine = doctrine_pluralism_righteous
+            add_doctrine = doctrine_pluralism_fundamentalist  
+        }
         trigger_event = { id = ecumenical_council.0101 days = {7 14} }
     }
     option = {
@@ -73,8 +74,10 @@ ecumenical_council.0100 = {
             base = 15
         }
         name = ecumenical_council.0100.c
-		faith:universal_church = { remove_doctrine = doctrine_pluralism_righteous }
-        faith:universal_church = { add_doctrine = doctrine_pluralism_pluralistic }
+        global_var:new_faith = {
+            remove_doctrine = doctrine_pluralism_righteous
+            add_doctrine = doctrine_pluralism_pluralistic  
+        }
         trigger_event = { id = ecumenical_council.0101 days = {7 14} }
     }
 }
@@ -99,7 +102,7 @@ ecumenical_council.0101 = {
             base = 60
         }
         name = ecumenical_council.0101.a
-        faith:universal_church = {
+        global_var:new_faith = {
             remove_doctrine = special_doctrine_ecumenical_christian
         }
         trigger_event = { id = ecumenical_council.0102 days = {7 14} }
@@ -134,8 +137,8 @@ ecumenical_council.0102 = {
             base = 40
         }
         name = ecumenical_council.0102.a
-		faith:universal_church = { remove_doctrine = doctrine_divorce_approval }
-        faith:universal_church = { add_doctrine = doctrine_divorce_disallowed }
+		global_var:new_faith = { remove_doctrine = doctrine_divorce_approval }
+        global_var:new_faith = { add_doctrine = doctrine_divorce_disallowed }
         trigger_event = { id = ecumenical_council.0103 days = {7 14} }
     }
     option = {
@@ -143,7 +146,7 @@ ecumenical_council.0102 = {
             base = 60
         }
         name = ecumenical_council.0102.b
-        faith:universal_church = { add_doctrine = doctrine_divorce_approval }
+        global_var:new_faith = { add_doctrine = doctrine_divorce_approval }
         trigger_event = { id = ecumenical_council.0103 days = {7 14} }
     }
 }
@@ -168,8 +171,8 @@ ecumenical_council.0103 = {
             base = 20
         }
         name = ecumenical_council.0103.a
-		faith:universal_church = { remove_doctrine = doctrine_bastardry_legitimization }
-        faith:universal_church = { add_doctrine = doctrine_bastardry_none }
+		global_var:new_faith = { remove_doctrine = doctrine_bastardry_legitimization }
+        global_var:new_faith = { add_doctrine = doctrine_bastardry_none }
         trigger_event = { id = ecumenical_council.0104 days = {7 14} }
     }
     option = {
@@ -177,7 +180,7 @@ ecumenical_council.0103 = {
             base = 80
         }
         name = ecumenical_council.0103.b
-        faith:universal_church = { add_doctrine = doctrine_bastardry_legitimization }
+        global_var:new_faith = { add_doctrine = doctrine_bastardry_legitimization }
         trigger_event = { id = ecumenical_council.0104 days = {7 14} }
     }
 }
@@ -202,8 +205,8 @@ ecumenical_council.0104 = {
             base = 30
         }
         name = ecumenical_council.0104.a
-		faith:universal_church = { remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
-        faith:universal_church = { add_doctrine = doctrine_consanguinity_restricted }
+		global_var:new_faith = { remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
+        global_var:new_faith = { add_doctrine = doctrine_consanguinity_restricted }
         trigger_event = { id = ecumenical_council.0105 days = {7 14} }
     }
     option = {
@@ -211,8 +214,8 @@ ecumenical_council.0104 = {
             base = 35
         }
         name = ecumenical_council.0104.b
-		faith:universal_church = { remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
-        faith:universal_church = { add_doctrine = doctrine_consanguinity_cousins }
+		global_var:new_faith = { remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
+        global_var:new_faith = { add_doctrine = doctrine_consanguinity_cousins }
         trigger_event = { id = ecumenical_council.0105 days = {7 14} }
     }
     option = {
@@ -220,7 +223,7 @@ ecumenical_council.0104 = {
             base = 35
         }
         name = ecumenical_council.0104.c
-        faith:universal_church = { add_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
+        global_var:new_faith = { add_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
         trigger_event = { id = ecumenical_council.0105 days = {7 14} }
     }
 }
@@ -245,8 +248,8 @@ ecumenical_council.0105 = {
             base = 45
         }
         name = ecumenical_council.0105.a
-		faith:universal_church = { remove_doctrine = doctrine_adultery_men_shunned }
-        faith:universal_church = { add_doctrine = doctrine_adultery_men_crime }
+		global_var:new_faith = { remove_doctrine = doctrine_adultery_men_shunned }
+        global_var:new_faith = { add_doctrine = doctrine_adultery_men_crime }
         trigger_event = { id = ecumenical_council.0106 days = {7 14} }
     }
     option = {
@@ -254,8 +257,8 @@ ecumenical_council.0105 = {
             base = 10
         }
         name = ecumenical_council.0105.b
-		faith:universal_church = { remove_doctrine = doctrine_adultery_women_crime }
-        faith:universal_church = { add_doctrine = doctrine_adultery_women_shunned }
+		global_var:new_faith = { remove_doctrine = doctrine_adultery_women_crime }
+        global_var:new_faith = { add_doctrine = doctrine_adultery_women_shunned }
         trigger_event = { id = ecumenical_council.0106 days = {7 14} }
     }
     option = {
@@ -287,7 +290,7 @@ ecumenical_council.0106 = {
             base = 75
         }
         name = ecumenical_council.0106.a
-        faith:universal_church = { add_doctrine = doctrine_clerical_function_taxation }
+        global_var:new_faith = { add_doctrine = doctrine_clerical_function_taxation }
         trigger_event = { id = ecumenical_council.0107 days = {7 14} }
     }
     option = {
@@ -295,8 +298,8 @@ ecumenical_council.0106 = {
             base = 25
         }
         name = ecumenical_council.0106.b
-		faith:universal_church = { remove_doctrine = doctrine_clerical_function_taxation }
-        faith:universal_church = { add_doctrine = doctrine_clerical_function_alms_and_pacification }
+		global_var:new_faith = { remove_doctrine = doctrine_clerical_function_taxation }
+        global_var:new_faith = { add_doctrine = doctrine_clerical_function_alms_and_pacification }
         trigger_event = { id = ecumenical_council.0107 days = {7 14} }
     }
 }
@@ -321,7 +324,7 @@ ecumenical_council.0107 = {
             base = 70
         }
         name = ecumenical_council.0107.a
-        faith:universal_church = { add_doctrine = doctrine_clerical_marriage_disallowed }
+        global_var:new_faith = { add_doctrine = doctrine_clerical_marriage_disallowed }
         trigger_event = { id = ecumenical_council.0108 days = {7 14} }
     }
     option = {
@@ -329,8 +332,8 @@ ecumenical_council.0107 = {
             base = 30
         }
         name = ecumenical_council.0107.b
-		faith:universal_church = { remove_doctrine = doctrine_clerical_marriage_disallowed }
-        faith:universal_church = { add_doctrine = doctrine_clerical_marriage_allowed }
+		global_var:new_faith = { remove_doctrine = doctrine_clerical_marriage_disallowed }
+        global_var:new_faith = { add_doctrine = doctrine_clerical_marriage_allowed }
         trigger_event = { id = ecumenical_council.0108 days = {7 14} }
     }
 }
@@ -355,7 +358,7 @@ ecumenical_council.0108 = {
 		ai_chance = {
             base = 50
         }
-		faith:universal_church = {
+		global_var:new_faith = {
 			add_doctrine = tenet_mendicant_preachers
 		}
 		trigger_event = {
@@ -368,7 +371,7 @@ ecumenical_council.0108 = {
 		ai_chance = {
 			base = 50
 		}
-		faith:universal_church = {
+		global_var:new_faith = {
 			add_doctrine = tenet_armed_pilgrimages
 		}
 		trigger_event = {
@@ -396,7 +399,7 @@ ecumenical_council.0109 = {
             base = 50
         }
         name = ecumenical_council.0109.a
-        faith:universal_church = {
+        global_var:new_faith = {
 			add_doctrine = tenet_universal_catechism
 		}
         trigger_event = {
@@ -409,7 +412,7 @@ ecumenical_council.0109 = {
             base = 50
         }
         name = ecumenical_council.0109.b
-        faith:universal_church = {
+        global_var:new_faith = {
 			add_doctrine = tenet_faith_triumphant
 		}
         trigger_event = {
@@ -437,7 +440,7 @@ ecumenical_council.0200 = {
 
 	option = {
 		name = ecumenical_council.0200.a
-		set_character_faith = faith:universal_church
+		set_character_faith = global_var:new_faith
         # the 3 heads of faith will convert and the titles will be destroyed
         # to simulate all submitting under the banner of the council's doctrine
         # i tagged this as alt-history so don't complain about realism lol
@@ -449,7 +452,7 @@ ecumenical_council.0200 = {
 		}
         destroy_title = title:k_papal_state
         scope:scoped_pope = { # pope converts and the title goes away
-            set_character_faith = faith:universal_church
+            set_character_faith = global_var:new_faith
         }
         if = {
 			limit = { exists = title:k_orthodox.holder }
@@ -457,7 +460,7 @@ ecumenical_council.0200 = {
 		}
         destroy_title = title:k_orthodox
         scope:scoped_patriarch = { # patriarch converts and the title goes away
-            set_character_faith = faith:universal_church
+            set_character_faith = global_var:new_faith
         }
         if = {
 			limit = { exists = title:d_coptic_papacy.holder }
@@ -465,18 +468,18 @@ ecumenical_council.0200 = {
 		}
         destroy_title = title:d_coptic_papacy
         scope:scoped_coptic = { # coptic pope converts and the title goes away
-            set_character_faith = faith:universal_church
+            set_character_faith = global_var:new_faith
         }
         title:e_byzantium.holder = {
-            set_character_faith = faith:universal_church
+            set_character_faith = global_var:new_faith
         }
         title:e_hre.holder = {
-            set_character_faith = faith:universal_church
+            set_character_faith = global_var:new_faith
         }
-        title:e_byzantium = { set_state_faith = faith:universal_church }
+        title:e_byzantium = { set_state_faith = global_var:new_faith }
 		every_held_title = {
 			title_tier = county
-			set_county_faith = faith:universal_church
+			set_county_faith = global_var:new_faith
 		}
 		hold_ecumenical_council_scripted_effect = yes
 	}
@@ -504,10 +507,10 @@ ecumenical_council.0201 = {
                 }
             }
         }
-		set_character_faith = faith:universal_church
+		set_character_faith = global_var:new_faith
 		every_held_title = {
             title_tier = county
-            set_county_faith = faith:universal_church
+            set_county_faith = global_var:new_faith
         }
 		ai_chance = {
             base = 85
@@ -566,10 +569,10 @@ ecumenical_council.0202 = {
                 }
             }
         }
-		set_character_faith = faith:universal_church
+		set_character_faith = global_var:new_faith
 		every_held_title = {
             title_tier = county
-            set_county_faith = faith:universal_church
+            set_county_faith = global_var:new_faith
         }
 		ai_chance = {
 			base = 55
@@ -679,7 +682,7 @@ ecumenical_council.0300 = {
                 change = scope:change
             }
         }
-        faith:universal_church = {
+        global_var:new_faith = {
             set_religious_head_title = title:k_apostolic_see
             change_fervor = {
                 value = 15

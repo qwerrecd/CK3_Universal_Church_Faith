@@ -1,0 +1,7 @@
+﻿### This faith doesn't exist yet, so it can't be accessed in the list and shouldn't be able to exist in any capacity, really.
+invisible = {
+	group = "special"
+	is_available_on_create = { always = no }
+
+	doctrine_invisible_faith = { visible = no }
+}
