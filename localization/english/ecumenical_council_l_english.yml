@@ -1,40 +1,40 @@
 ﻿l_english:
 
   hold_ecumenical_council_decision:0 "Convene the Great Ecumenical Council"
-  hold_ecumenical_council_decision_desc:0 "Summon the bishops and patriarchs of Christendom to reconcile doctrine and establish a new Universal Church."
-  hold_ecumenical_council_decision_tooltip:0 "Unite Christendom under a single, universal faith."
+  hold_ecumenical_council_decision_desc:0 "Summon the bishops and patriarchs of Christendom to reconcile doctrine and establish a new Unified Church."
+  hold_ecumenical_council_decision_tooltip:0 "Unite Christendom under a single, unbroken faith."
   hold_ecumenical_council_decision_confirm:0 "The time for unity is now!"
   hold_ecumenical_council_decision_effect_tooltip:0 "The disparate Christian faiths will come together for a council dedicated to ending the schisms dividing Christendom."
 
   establish_new_church_leader_decision:0 "Establish the Apostolic See"
-  establish_new_church_leader_decision_desc:0 "The Universal Church stands united, yet lacks a shepherd to guide the faithful and safeguard doctrine. By divine right and the Council’s authority, we may now restore the Apostolic See and appoint its first Apostle."
-  establish_new_church_leader_decision_tooltip:0 "Convene the remaining Council delegates to appoint a spiritual leader for the Universal Church."
+  establish_new_church_leader_decision_desc:0 "The new church stands united, yet lacks a shepherd to guide the faithful and safeguard doctrine. By divine right and the Council’s authority, we may now restore the Apostolic See and appoint its first Apostle."
+  establish_new_church_leader_decision_tooltip:0 "Convene the remaining Council delegates to appoint a spiritual leader for the Unified Church."
   establish_new_church_leader_decision_confirm:0 "Restore the Apostolic See."
   establish_new_church_leader_decision_effect_tooltip:0 "Find a worthy shepherd for the newly reunited flock of Christendom."
 
-  create_universal_holy_order_decision:0 "Found Universal Holy Order"
-  create_universal_holy_order_decision_desc:0 "As the stubbornness of the old holy orders has led them astray, we must found a new holy order to defend our faith."
-  create_universal_holy_order_decision_confirm:0 "For the defense of the faith and the faithful!"
-  create_universal_holy_order_decision_tooltip:0 "Create a new holy order to defend the unified faith."
-  create_universal_holy_order_decision_effect_message:0 "With the subsidies of the faithful and the support of the Apostolic See, a [holy_order|E] of your [faith|E] will be founded for much cheaper than usual\n$EFFECT_LIST_BULLET$You become the order's [holy_order_patron|E].\n$EFFECT_LIST_BULLET$You will select a non [county|E] [capital|E] [barony|E] as the order's Headquarters."
+  create_unified_holy_order_decision:0 "Found Unified Christian Holy Order"
+  create_unified_holy_order_decision_desc:0 "As the stubbornness of the old holy orders has led them astray, we must found a new holy order to defend our faith."
+  create_unified_holy_order_decision_confirm:0 "For the defense of the faith and the faithful!"
+  create_unified_holy_order_decision_tooltip:0 "Create a new holy order to defend the unified faith."
+  create_unified_holy_order_decision_effect_message:0 "With the subsidies of the faithful and the support of the Apostolic See, a [holy_order|E] of your [faith|E] will be founded for much cheaper than usual\n$EFFECT_LIST_BULLET$You become the order's [holy_order_patron|E].\n$EFFECT_LIST_BULLET$You will select a non [county|E] [capital|E] [barony|E] as the order's Headquarters."
 
   ecumenical_council.0200.t:0 "The Great Ecumenical Council Concludes"
-  ecumenical_council.0200.desc:0 "The five ancient sees stand reclaimed by wider Christendom. The emperors of East and West lend their blessing, and the heads of the ancient churches have gathered in assembly. After months of debate, the Universal Church is proclaimed."
-  ecumenical_council.0200.a:0 "Let the Universal Church be born!"
+  ecumenical_council.0200.desc:0 "The five ancient sees stand reclaimed by wider Christendom. The emperors of East and West lend their blessing, and the heads of the ancient churches have gathered in assembly. After months of debate, the Unified Church is proclaimed."
+  ecumenical_council.0200.a:0 "Let the Unified Church be reborn!"
   ecumenical_council.0200.a.tt:0 "The [GetGlobalVariable('new_faith').Faith.GetAdjective] Church is founded, and all of Christendom is invited to join."
 
-  ecumenical_council.0201.t:0 "A New Universal Faith"
+  ecumenical_council.0201.t:0 "A New United Faith"
   ecumenical_council.0201.desc:0 "The great council has reconciled the ancient divides of Christendom. Those who have always sought unity now see their dream realized. You are invited to embrace the [GetGlobalVariable('new_faith').Faith.GetAdjective] Church."
-  ecumenical_council.0201.a:0 "I shall join this new Universal Church."
+  ecumenical_council.0201.a:0 "I shall join this new United Church."
   ecumenical_council.0201.b:0 "My beliefs are unshaken by this posturing."
 
-  ecumenical_council.0202.t:0 "A New Universal Faith?"
-  ecumenical_council.0202.desc:0 "A grand council claims to have united Christendom under one creed. The decrees sound foreign to your traditions. Will you accept this Universal Church as the true heir of the faith?"
+  ecumenical_council.0202.t:0 "A New United Faith?"
+  ecumenical_council.0202.desc:0 "A grand council claims to have united Christendom under one creed. The decrees sound foreign to your traditions. Will you accept this United Church as the true heir of the faith?"
   ecumenical_council.0202.a:0 "Truly this can only be the work of Jesus Christ."
   ecumenical_council.0202.b:0 "The fools are united in error."
 
   ecumenical_council.0203.t:0 "The Christians Claim Unity"
-  ecumenical_council.0203.desc:0 "Across the lands of the Christians, a great council has declared a new Universal Church. The priests speak of unity and renewal; of another power rising in the west."
+  ecumenical_council.0203.desc:0 "Across the lands of the Christians, a great council has declared a new United Church. The priests speak of unity and renewal; of another power rising in the west."
   ecumenical_council.0203.a:0 "Bah! A bold claim, sure to falter."
 
   ecumenical_papacy_approval:0 "[GetTitleByKey('k_papal_state').GetHolder.GetTitledFirstName] must have at least #V 75#! [opinion|E] of you (#V 100#! if [GetTitleByKey('k_papal_state').GetHolder.GetTitledFirstName] is [GetTrait('zealous').GetName(GetNullCharacter)])."
@@ -124,6 +124,6 @@
   ecumenical_council.0109.b:0 "'Be on your guard; stand firm in the faith; be courageous; be strong.' - 1 Corinthians 16:13"
 
   # 0300 - A new leader of the faith
-  ecumenical_council.0300.t:0 "A Shepherd for the Universal Church"
-  ecumenical_council.0300.desc:0 "The Council’s great is nearly completed, but one matter remains. Who will guide this nascent Universal Church? The faithful are united in doctrine, yet unity demands a shepherd to guard it.\n\n“Feed my sheep,” the Lord said to Peter. So too must we now find one fit to bear that charge."
+  ecumenical_council.0300.t:0 "A Shepherd for the Unified Church"
+  ecumenical_council.0300.desc:0 "The Council’s great is nearly completed, but one matter remains. Who will guide this nascent Unified Church? The faithful are united in doctrine, yet unity demands a shepherd to guard it.\n\n“Feed my sheep,” the Lord said to Peter. So too must we now find one fit to bear that charge."
   ecumenical_council.0300.a:0 "The Lord be with him as he guides the flock."

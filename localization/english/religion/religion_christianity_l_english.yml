@@ -76,12 +76,12 @@
  christianity_water_god_name:0 "$christianity_health_god_name$"
  christianity_water_god_name_possessive:0 "$christianity_health_god_name_possessive$"
 
- #Universal Church Localization
+ #Unified Church Localization
  unified_church:0 "Unified Christianity"
  unified_church_adj:0 "Unified Christian"
  unified_church_adherent:0 "Christian"
  unified_church_adherent_plural:0 "Christians"
- unified_church_desc:0 "An ecumenical revival of the unified church at the time of Jesus, the Universal Church seeks to bring together all Christians; emphasizing shared beliefs, resolving doctrinal differences, and promoting unity and communion under Jesus above all else."
+ unified_church_desc:0 "An ecumenical revival of the unified church at the time of Jesus, the Unified Church seeks to bring together all Christians; emphasizing shared beliefs, resolving doctrinal differences, and promoting unity and communion under Jesus above all else."
  unified_church_religious_head_title:0 "Apostle"
  unified_church_religious_head_title_name:0 "Apostleship"
 

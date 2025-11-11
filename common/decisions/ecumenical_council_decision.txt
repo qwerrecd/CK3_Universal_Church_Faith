@@ -385,12 +385,12 @@ dismantle_papacy_decision = { #For Muslims and Pagans.
 	}
 }
 
-create_universal_holy_order_decision = {
+create_unified_holy_order_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
 	}
-	desc = create_universal_holy_order_decision_desc
-    selection_tooltip = create_universal_holy_order_decision_tooltip
+	desc = create_unified_holy_order_decision_desc
+    selection_tooltip = create_unified_holy_order_decision_tooltip
 	decision_group_type = major
 
 	ai_goal = yes
@@ -491,7 +491,7 @@ create_universal_holy_order_decision = {
 	}
 
 	effect = {
-		custom_tooltip = create_universal_holy_order_decision_effect_message
+		custom_tooltip = create_unified_holy_order_decision_effect_message
 
 		if = { # If you have no valid barony this will throw errors when you open the decision - we add this check to avoid that 
 			limit = {
@@ -566,5 +566,5 @@ create_universal_holy_order_decision = {
 		}
 	}
 
-	confirm_text = create_universal_holy_order_decision_confirm
+	confirm_text = create_unified_holy_order_decision_confirm
 }

@@ -4,8 +4,8 @@
 
  #Abrahamic Tenets
 
- tenet_universal_catechism_name:0 "Universal Catechism"
- tenet_universal_catechism_desc:0 "The truth of God is one, but men stumble in darkness without guidance. By teaching, studying, and reasoning together, the Church shall bring all souls into understanding. Sound doctrine and careful study are lights to our path."
+ tenet_unified_catechism_name:0 "Unified Catechism"
+ tenet_unified_catechism_desc:0 "The truth of God is one, but men stumble in darkness without guidance. By teaching, studying, and reasoning together, the Church shall bring all souls into understanding. Sound doctrine and careful study are lights to our path."
 
  tenet_faith_triumphant_name:0 "Faith Triumphant"
  tenet_faith_triumphant_desc:0 "Understanding is a virtue, but conviction is salvation. The faithful do not question endlessly. They stand firm in the truth once revealed. The Church shall not waver, for faith unyielding is faith unbroken."
@@ -365,7 +365,7 @@
  doctrine_parameter_cannibalism_legal:0 "The [GetTrait('cannibal').GetName( GetNullCharacter )] trait is no longer considered [criminal|E]"
 
  tenet_exaltation_of_pain_name:0 "Exaltation of Pain"
- tenet_exaltation_of_pain_desc:0 "Pain is the universal emotion, violence the universal language. To bestow pain upon another is to give them a blessing, so receive pain one's self is to receive grace."
+ tenet_exaltation_of_pain_desc:0 "Pain is the unified emotion, violence the unified language. To bestow pain upon another is to give them a blessing, so receive pain one's self is to receive grace."
  doctrine_parameter_torturing_prisoners_grants_piety:0 "Torturing [prisoners|E] earn [piety|E] instead of costing [piety|E]"
  doctrine_parameter_reduced_stress_from_torture:0 "Adherents are resistant to the negative effects of being tortured"
  doctrine_parameter_self_mutilation_active:0 "Can [decide|E] to Perform Self-Mutilation, earning [piety|E] at the cost of getting the [GetTrait('wounded_1').GetName( GetPlayer )] [trait|E]"

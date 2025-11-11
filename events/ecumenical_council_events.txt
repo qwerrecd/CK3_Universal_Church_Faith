@@ -400,7 +400,7 @@ ecumenical_council.0109 = {
         }
         name = ecumenical_council.0109.a
         global_var:new_faith = {
-			add_doctrine = tenet_universal_catechism
+			add_doctrine = tenet_unified_catechism
 		}
         trigger_event = {
 			id = ecumenical_council.0200
