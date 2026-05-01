@@ -1,0 +1,7 @@
+﻿doctrine_core_tenets = {
+	doctrine_types = {
+		tenet_universal_catechism
+		tenet_faith_triumphant
+	}
+}
+

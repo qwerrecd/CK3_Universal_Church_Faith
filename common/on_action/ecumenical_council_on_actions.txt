@@ -1,28 +1,16 @@
 ﻿on_game_start_after_lobby = {
 	on_actions = {
-		set_unified_church
+		set_universal_church_locked
 	}
 }
 
-set_unified_church = {
+set_universal_church_locked = {
 	effect = {
-		faith:unified_church = {
-			set_variable = { name = block_conversion_till_decision_taken }
-		}
-		faith:unified_church_catholic = {
-			set_variable = { name = block_conversion_till_decision_taken }
-		}
-		faith:unified_church_orthodox = {
-			set_variable = { name = block_conversion_till_decision_taken }
-		}
-		faith:unified_church_coptic = {
-			set_variable = { name = block_conversion_till_decision_taken }
-		}
-		faith:unified_church_apostolic = {
+		faith:universal_church = {
 			set_variable = { name = block_conversion_till_decision_taken }
 		}
 		title:k_apostolic_see = {
-			set_coa = k_apostolic_see_coa
+			set_coa = k_apostolic_see
 		}
 	}
 }

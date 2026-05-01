@@ -175,7 +175,7 @@
 		top_liege = this
 	}
 
-	effect = {
+	effect = { 
         add_piety = 1000
         gain_holy_legend_seed_tooltip_effect = yes
         custom_tooltip = hold_ecumenical_council_decision_effect_tooltip
@@ -190,49 +190,41 @@
 			}
 			if = {
 				limit = {
-					faith = faith:catholic
+					root.faith = faith:catholic
 				}
 				set_global_variable = {
-					name = new_faith
-					value = faith:unified_church_catholic
+					name = catholic_mended_schism
+					value = yes
 				}
 			}
 			else_if = {
 				limit = {
-					faith = faith:orthodox
+					root.faith = faith:orthodox
 				}
 				set_global_variable = {
-					name = new_faith
-					value = faith:unified_church_orthodox
-				}
+					name = orthodox_mended_schism
+					value = yes
+				}	
 			}
 			else_if = {
 				limit = {
-					faith = faith:coptic
+					root.faith = faith:coptic
 				}
 				set_global_variable = {
-					name = new_faith
-					value = faith:unified_church_coptic
-				}
+					name = coptic_mended_schism
+					value = yes
+				}	
 			}
 			else_if = {
 				limit = {
-					faith = faith:armenian_apostolic
+					root.faith = faith:armenian_apostolic
 				}
 				set_global_variable = {
-					name = new_faith
-					value = faith:unified_church_apostolic
-				}
+					name = apostolic_mended_schism
+					value = yes
+				}	
 			}
-			else = {
-				set_global_variable = {
-					name = new_faith
-					value = faith:unified_church
-				}
-			}
-			global_var:new_faith = {
-				remove_doctrine = doctrine_invisible_faith
-			}
+			else = { }
 		}
     }
 
@@ -244,7 +236,7 @@
     }
 }
 
-establish_new_church_leader_decision { # a new leader emerges
+establish_new_church_leader_decision = { # a new leader emerges
     picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
 	}
@@ -266,7 +258,7 @@ establish_new_church_leader_decision { # a new leader emerges
     }
 
     is_valid = {
-        faith = global_var:new_faith
+        faith = faith:universal_church
         completely_controls = title:k_jerusalem
     }
 
@@ -286,7 +278,7 @@ establish_new_church_leader_decision { # a new leader emerges
     }
 
     ai_potential = {
-        faith = global_var:new_faith
+        faith = faith:universal_church
         highest_held_title_tier > tier_duchy
         NOT = { faith = { exists = religious_head } }
         completely_controls = title:k_jerusalem
@@ -385,12 +377,12 @@ dismantle_papacy_decision = { #For Muslims and Pagans.
 	}
 }
 
-create_unified_holy_order_decision = {
+create_universal_holy_order_decision = {
 	picture = {
 		reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds"
 	}
-	desc = create_unified_holy_order_decision_desc
-    selection_tooltip = create_unified_holy_order_decision_tooltip
+	desc = create_universal_holy_order_decision_desc
+    selection_tooltip = create_universal_holy_order_decision_tooltip
 	decision_group_type = major
 
 	ai_goal = yes
@@ -398,7 +390,7 @@ create_unified_holy_order_decision = {
 	is_shown = {
 		is_landed = yes
 		NOR = {
-				faith != global_var:new_faith # no converting away >:( that was the whole point
+				faith != faith:universal_church # no converting away >:( that was the whole point
 				faith = {
 					any_faith_holy_order = { # only one holy order allowed
 						holy_order_patron = root
@@ -434,17 +426,11 @@ create_unified_holy_order_decision = {
 	}
 
 	is_valid = {
-		trigger_if = {
-			custom_description = {
-				text = "is_king_or_emperor"
-				highest_held_title_tier >= tier_kingdom
-			}
+		custom_description = {
+			text = "is_king_or_emperor"
+			highest_held_title_tier >= tier_kingdom
 		}
-		trigger_if = {
-			limit = {
-				piety_level >= 4
-			}
-		}
+		piety_level >= 4
 		trigger_if = {
 			limit = {
 				exists = faith.religious_head
@@ -491,7 +477,7 @@ create_unified_holy_order_decision = {
 	}
 
 	effect = {
-		custom_tooltip = create_unified_holy_order_decision_effect_message
+		custom_tooltip = create_universal_holy_order_decision_effect_message
 
 		if = { # If you have no valid barony this will throw errors when you open the decision - we add this check to avoid that 
 			limit = {
@@ -566,5 +552,5 @@ create_unified_holy_order_decision = {
 		}
 	}
 
-	confirm_text = create_unified_holy_order_decision_confirm
+	confirm_text = create_universal_holy_order_decision_confirm
 }
