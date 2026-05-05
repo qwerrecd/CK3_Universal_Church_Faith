@@ -33,8 +33,9 @@
 	}
 
 	hidden_effect = {
-		global_var:new_faith = {
+		faith:universal_church = {
 			remove_variable = block_conversion_till_decision_taken
+			remove_doctrine = doctrine_invisible_faith
 			change_fervor = {
 				value = 25
 				desc = fervor_gain_mended_schism_ecumenical
@@ -46,7 +47,7 @@
 				limit = {
 					this.religion = root.faith.religion
 					has_doctrine = special_doctrine_ecumenical_christian
-					this != global_var:new_faith
+					this != faith:universal_church
 				}
 				change_fervor = {
 					value = -25
