@@ -35,6 +35,7 @@
 	hidden_effect = {
 		faith:universal_church = {
 			remove_variable = block_conversion_till_decision_taken
+			remove_doctrine = doctrine_invisible_faith
 			change_fervor = {
 				value = 25
 				desc = fervor_gain_mended_schism_ecumenical
