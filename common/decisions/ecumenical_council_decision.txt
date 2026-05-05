@@ -1,4 +1,4 @@
-﻿hold_ecumenical_council_decision = {
+hold_ecumenical_council_decision = {
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
 	desc = hold_ecumenical_council_decision_desc
 	selection_tooltip = hold_ecumenical_council_decision_tooltip
