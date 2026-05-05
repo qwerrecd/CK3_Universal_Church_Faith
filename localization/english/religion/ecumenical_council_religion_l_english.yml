@@ -1,8 +1,0 @@
-﻿l_english:
-
- doctrine_invisible_faith_name:0 "Invisible Faith"
- doctrine_invisible_faith:0 "This faith doesn't exist (yet)."
- doctrine_invisible_faith_desc:0 "If you're reading this then there's something wrong with how I hid these faiths and you should report it."
-
- empty_tenet_name:0 "_"
- empty_tenet_name_desc:0 "Click to select new doctrine or leave it empty."
