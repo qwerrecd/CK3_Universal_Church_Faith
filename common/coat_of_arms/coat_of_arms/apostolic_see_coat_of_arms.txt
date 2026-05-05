@@ -1,4 +1,4 @@
-k_apostolic_see_coa = {
+k_apostolic_see = {
 	pattern = "pattern_solid.dds"
 	color1 = "white"
 	colored_emblem = {
