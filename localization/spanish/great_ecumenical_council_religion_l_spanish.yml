@@ -1,0 +1,25 @@
+﻿l_spanish:
+ # Iglesia Universal
+ universal_church:0 "Iglesia Universal"
+ universal_church_adj:0 "Cristiano Universal"
+ universal_church_adherent:0 "Cristiano"
+ universal_church_adherent_plural:0 "Cristianos"
+ universal_church_desc:0 "Un resurgimiento ecuménico de la iglesia unificada en tiempos de Jesús, la Iglesia Universal busca unir a todos los cristianos; enfatizando creencias compartidas, resolviendo diferencias doctrinales y promoviendo la unidad y la comunión bajo Jesús por encima de todo."
+ universal_church_religious_head_title:0 "Apóstol"
+ universal_church_religious_head_title_name:0 "Apostolado"
+ doctrine_invisible_faith_name:0 "Fe invisible"
+ doctrine_invisible_faith:0 "Esta fe todavía no existe."
+ doctrine_invisible_faith_desc:0 "Si estás leyendo esto, la Iglesia Universal quedó expuesta antes de que el Gran Concilio Ecuménico la creara."
+
+ # Nombres alternativos
+ universal_church_orthodox:0 "Ortodoxia unida"
+ universal_church_catholic:0 "Catolicismo unido"
+ universal_church_coptic:0 "Coptismo unido"
+ universal_church_apostolic:0 "Apostolismo unido"
+ universal_church_default:0 "Iglesia Universal"
+
+ # Dogmas del concilio
+ tenet_universal_catechism_name:0 "Catecismo Universal"
+ tenet_universal_catechism_desc:0 "La verdad de Dios es una, pero los hombres tropiezan en la oscuridad sin guía. Enseñando, estudiando y razonando juntos, la Iglesia llevará a todas las almas al entendimiento. La sana doctrina y el estudio cuidadoso son luces en nuestro camino."
+ tenet_faith_triumphant_name:0 "Fe Triunfante"
+ tenet_faith_triumphant_desc:0 "El entendimiento es una virtud, pero la convicción es la salvación. Los fieles no cuestionan sin cesar. Se mantienen firmes en la verdad una vez revelada. La Iglesia no vacilará, pues la fe inquebrantable es fe intacta."

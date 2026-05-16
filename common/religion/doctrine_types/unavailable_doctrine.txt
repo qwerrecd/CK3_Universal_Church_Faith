@@ -1,3 +1,4 @@
-doctrine_invisible_faith = {
+﻿doctrine_invisible_faith = {
+	icon = core_tenet_empty
 	visible = no
 }

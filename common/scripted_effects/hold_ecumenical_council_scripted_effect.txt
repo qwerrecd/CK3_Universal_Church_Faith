@@ -55,6 +55,7 @@
 				}
 			}
 		}
+		remove_character_flag = ecumenical_council_in_progress
 		add_character_flag = held_ecumenical_council
 	}
 

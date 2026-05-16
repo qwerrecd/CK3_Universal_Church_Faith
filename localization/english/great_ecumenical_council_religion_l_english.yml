@@ -1,0 +1,25 @@
+﻿l_english:
+ # Universal Church
+ universal_church:0 "Universal Church"
+ universal_church_adj:0 "Universal Christian"
+ universal_church_adherent:0 "Christian"
+ universal_church_adherent_plural:0 "Christians"
+ universal_church_desc:0 "An ecumenical revival of the unified church at the time of Jesus, the Universal Church seeks to bring together all Christians; emphasizing shared beliefs, resolving doctrinal differences, and promoting unity and communion under Jesus above all else."
+ universal_church_religious_head_title:0 "Apostle"
+ universal_church_religious_head_title_name:0 "Apostleship"
+ doctrine_invisible_faith_name:0 "Invisible Faith"
+ doctrine_invisible_faith:0 "This faith doesn't exist yet."
+ doctrine_invisible_faith_desc:0 "If you're reading this, the Universal Church was exposed before the Great Ecumenical Council created it."
+
+ # Alternate names
+ universal_church_orthodox:0 "United Orthodoxy"
+ universal_church_catholic:0 "United Catholicism"
+ universal_church_coptic:0 "United Coptic"
+ universal_church_apostolic:0 "United Apostolic"
+ universal_church_default:0 "Universal Church"
+
+ # Council tenets
+ tenet_universal_catechism_name:0 "Universal Catechism"
+ tenet_universal_catechism_desc:0 "The truth of God is one, but men stumble in darkness without guidance. By teaching, studying, and reasoning together, the Church shall bring all souls into understanding. Sound doctrine and careful study are lights to our path."
+ tenet_faith_triumphant_name:0 "Faith Triumphant"
+ tenet_faith_triumphant_desc:0 "Understanding is a virtue, but conviction is salvation. The faithful do not question endlessly. They stand firm in the truth once revealed. The Church shall not waver, for faith unyielding is faith unbroken."

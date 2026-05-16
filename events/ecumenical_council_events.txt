@@ -437,13 +437,57 @@ ecumenical_council.0200 = {
 
 	option = {
 		name = ecumenical_council.0200.a
+		custom_tooltip = ecumenical_council.0200.a.tt
+		hidden_effect = { # no double schism mending
+			add_to_global_variable_list = {
+				name = unavailable_unique_decisions
+				target = flag:flag_mended_great_schism
+			}
+			if = {
+				limit = {
+					root.faith = faith:catholic
+				}
+				set_global_variable = {
+					name = catholic_mended_schism
+					value = yes
+				}
+			}
+			else_if = {
+				limit = {
+					root.faith = faith:orthodox
+				}
+				set_global_variable = {
+					name = orthodox_mended_schism
+					value = yes
+				}
+			}
+			else_if = {
+				limit = {
+					root.faith = faith:coptic
+				}
+				set_global_variable = {
+					name = coptic_mended_schism
+					value = yes
+				}
+			}
+			else_if = {
+				limit = {
+					root.faith = faith:armenian_apostolic
+				}
+				set_global_variable = {
+					name = apostolic_mended_schism
+					value = yes
+				}
+			}
+			else = { }
+		}
 		set_character_faith = faith:universal_church
-        # the 3 heads of faith will convert and the titles will be destroyed
-        # to simulate all submitting under the banner of the council's doctrine
-        # i tagged this as alt-history so don't complain about realism lol
-        # i also figure this sorta thing doesn't work if there isn't a pope, ecumenical patriarch, and coptic head of faith
-        # but maybe that's an excuse for not bothering to handle those cases where they don't exist
-        if = {
+		# the 3 heads of faith will convert and the titles will be destroyed
+		# to simulate all submitting under the banner of the council's doctrine
+		# i tagged this as alt-history so don't complain about realism lol
+		# i also figure this sorta thing doesn't work if there isn't a pope, ecumenical patriarch, and coptic head of faith
+		# but maybe that's an excuse for not bothering to handle those cases where they don't exist
+		if = {
 			limit = { exists = title:k_papal_state.holder }
 			title:k_papal_state.holder = { save_scope_as = scoped_pope }
 			destroy_title = title:k_papal_state

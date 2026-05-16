@@ -1,4 +1,4 @@
-hold_ecumenical_council_decision = {
+﻿hold_ecumenical_council_decision = {
 	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
 	desc = hold_ecumenical_council_decision_desc
 	selection_tooltip = hold_ecumenical_council_decision_tooltip
@@ -24,6 +24,7 @@ hold_ecumenical_council_decision = {
 				target = flag:flag_mended_great_schism
 			}
 		}
+		NOT = { has_character_flag = ecumenical_council_in_progress }
 		faith = { has_doctrine = special_doctrine_ecumenical_christian } #They'd never listen to an Adamite calling for this I figure.
 	}
 
@@ -80,14 +81,14 @@ hold_ecumenical_council_decision = {
 
 
 		# 3–7. HRE, ERE, Papacy, Ecumenical Patriarchate, Coptic Papacy
-		exists = title:e_hre
+		title:e_hre = { is_title_created = yes }
 		title:e_hre.holder = { 
             opinion = { 
                 target = root value >= 75 
             }
         }
 
-		exists = title:e_byzantium
+		title:e_byzantium = { is_title_created = yes }
 		title:e_byzantium.holder = { 
             opinion = { 
                 target = root value >= 75 
@@ -97,7 +98,7 @@ hold_ecumenical_council_decision = {
         # Catholic Head of Faith Approves
         custom_description = {
             text = ecumenical_papacy_approval
-            exists = title:k_papal_state
+            exists = title:k_papal_state.holder
             title:k_papal_state.holder = {
                 OR = {
                     AND = {
@@ -115,7 +116,7 @@ hold_ecumenical_council_decision = {
         # Orthodox Head of Faith Approves
         custom_description = {
             text = ecumenical_orthodox_approval
-            exists = title:k_orthodox
+            exists = title:k_orthodox.holder
             title:k_orthodox.holder = {
                 OR = {
                     AND = {
@@ -133,7 +134,7 @@ hold_ecumenical_council_decision = {
         # Coptic Head of Faith Approves
         custom_description = {
             text = ecumenical_coptic_approval
-            exists = title:d_coptic_papacy
+            exists = title:d_coptic_papacy.holder
             title:d_coptic_papacy.holder = {
                 OR = {
                     AND = {
@@ -163,7 +164,7 @@ hold_ecumenical_council_decision = {
 		# 10. Independent + Ruler tier
 		is_independent_ruler = yes
 		OR = {
-            highest_held_title_tier >= 5
+            highest_held_title_tier >= tier_empire
             has_title = title:k_jerusalem
         }
 	}
@@ -183,48 +184,11 @@ hold_ecumenical_council_decision = {
 			hold_ecumenical_council_scripted_effect = yes
 		}
         trigger_event = ecumenical_council.0001
-        hidden_effect = { # no double schism mending
-			add_to_global_variable_list = {
-				name = unavailable_unique_decisions
-				target = flag:flag_mended_great_schism
+        hidden_effect = {
+			add_character_flag = {
+				flag = ecumenical_council_in_progress
+				years = 5
 			}
-			if = {
-				limit = {
-					root.faith = faith:catholic
-				}
-				set_global_variable = {
-					name = catholic_mended_schism
-					value = yes
-				}
-			}
-			else_if = {
-				limit = {
-					root.faith = faith:orthodox
-				}
-				set_global_variable = {
-					name = orthodox_mended_schism
-					value = yes
-				}	
-			}
-			else_if = {
-				limit = {
-					root.faith = faith:coptic
-				}
-				set_global_variable = {
-					name = coptic_mended_schism
-					value = yes
-				}	
-			}
-			else_if = {
-				limit = {
-					root.faith = faith:armenian_apostolic
-				}
-				set_global_variable = {
-					name = apostolic_mended_schism
-					value = yes
-				}	
-			}
-			else = { }
 		}
     }
 
@@ -323,7 +287,7 @@ dismantle_papacy_decision = { #For Muslims and Pagans.
             exists = religious_head # dunno why this isn't a check in vanilla but we need it for the edge case
             this.religion != root.faith.religion # this event is clearly designed for non-Christians
 		}
-		highest_held_title_tier > 3 #Only Kings and Emperors
+		highest_held_title_tier >= tier_kingdom #Only Kings and Emperors
 		capital_province = { #Indians could not possibly care...
 			OR = {
 				geographical_region = world_europe
@@ -338,7 +302,7 @@ dismantle_papacy_decision = { #For Muslims and Pagans.
 			limit = {
 				exists = title:k_papal_state.holder
 			}
-			title:k_papal_state.holder = { is_playable_character = no } #If he fled elsewhere, it cannot be done, the Pope must be landless.
+			title:k_papal_state.holder = { is_landed = no } #If he fled elsewhere, it cannot be done, the Pope must be landless.
 			title:k_papal_state.holder = { is_at_war = no } #Shouldn't be possible during a Crusade
 		}
 		completely_controls_region = world_europe_south_italy
@@ -393,7 +357,6 @@ create_universal_holy_order_decision = {
 				faith != faith:universal_church # no converting away >:( that was the whole point
 				faith = {
 					any_faith_holy_order = { # only one holy order allowed
-						holy_order_patron = root
 						save_temporary_scope_as = order
 					}
 				}

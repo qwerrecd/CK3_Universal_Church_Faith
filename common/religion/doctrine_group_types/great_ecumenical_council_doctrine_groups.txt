@@ -1,5 +1,5 @@
-doctrine_core_tenets = {
-	category = "tenets"
+﻿doctrine_core_tenets = {
+	category = "core_tenets"
 	number_of_picks = 3
 
 	doctrine_types = {
