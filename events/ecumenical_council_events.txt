@@ -11,13 +11,25 @@ ecumenical_council.0001 = {
         animation = personality_zealous
     }
     right_portrait = {
-        character = title:k_papal_state.holder
+        character = scope:scoped_pope
         animation = personality_zealous
     }
 	theme = realm
 
 	immediate = {
 		save_scope_as = council_host
+		if = {
+			limit = { exists = title:k_papal_state.holder }
+			title:k_papal_state.holder = { save_scope_as = scoped_pope }
+		}
+		if = {
+			limit = { exists = title:k_orthodox.holder }
+			title:k_orthodox.holder = { save_scope_as = scoped_patriarch }
+		}
+		if = {
+			limit = { exists = title:d_coptic_papacy.holder }
+			title:d_coptic_papacy.holder = { save_scope_as = scoped_coptic }
+		}
 	}
 	
 	option = {
@@ -30,12 +42,6 @@ ecumenical_council.0001 = {
 }
 
 # The Council begins
-
-
-
-# I'm honestly just going on vibes and a vague aim for verisimilitude.
-# Does a debate on that doctrine that *feel* realistic within the context of my alt-history?
-
 # Debate 1: Religious Attitude
 ecumenical_council.0100 = {
     type = character_event
@@ -46,7 +52,7 @@ ecumenical_council.0100 = {
         animation = personality_zealous
     }
 		right_portrait = {
-			character = title:k_papal_state.holder
+			character = scope:scoped_pope
 			animation = personality_zealous
 		}
     theme = realm
@@ -56,8 +62,13 @@ ecumenical_council.0100 = {
             base = 15
         }
         name = ecumenical_council.0100.a
-		faith:universal_church = { remove_doctrine = doctrine_pluralism_righteous }
-        faith:universal_church = { add_doctrine = doctrine_pluralism_fundamentalist }
+		show_as_tooltip = {
+			faith:universal_church = {
+				remove_doctrine = doctrine_pluralism_righteous
+				add_doctrine = doctrine_pluralism_fundamentalist
+			}
+		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_pluralism_fundamentalist years = 5 } }
         trigger_event = { id = ecumenical_council.0101 days = {7 14} }
     }
     option = {
@@ -73,8 +84,13 @@ ecumenical_council.0100 = {
             base = 15
         }
         name = ecumenical_council.0100.c
-		faith:universal_church = { remove_doctrine = doctrine_pluralism_righteous }
-        faith:universal_church = { add_doctrine = doctrine_pluralism_pluralistic }
+		show_as_tooltip = {
+			faith:universal_church = {
+				remove_doctrine = doctrine_pluralism_righteous
+				add_doctrine = doctrine_pluralism_pluralistic
+			}
+		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_pluralism_pluralistic years = 5 } }
         trigger_event = { id = ecumenical_council.0101 days = {7 14} }
     }
 }
@@ -85,7 +101,7 @@ ecumenical_council.0101 = {
     title = ecumenical_council.0101.t
     desc = ecumenical_council.0101.desc
     left_portrait = {
-        character = title:k_orthodox.holder
+        character = scope:scoped_patriarch
         animation = personality_compassionate
     }
 		right_portrait = {
@@ -99,9 +115,12 @@ ecumenical_council.0101 = {
             base = 60
         }
         name = ecumenical_council.0101.a
-        faith:universal_church = {
-            remove_doctrine = special_doctrine_ecumenical_christian
-        }
+		show_as_tooltip = {
+			faith:universal_church = {
+				remove_doctrine = special_doctrine_ecumenical_christian
+			}
+		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_no_ecumenism years = 5 } }
         trigger_event = { id = ecumenical_council.0102 days = {7 14} }
     }
     option = {
@@ -120,11 +139,11 @@ ecumenical_council.0102 = {
     title = ecumenical_council.0102.t
     desc = ecumenical_council.0102.desc
     left_portrait = {
-        character = title:k_papal_state.holder
+        character = scope:scoped_pope
         animation = personality_honorable
     }
 		right_portrait = {
-			character = title:k_orthodox.holder
+			character = scope:scoped_patriarch
 			animation = personality_rational
 		}
     theme = realm
@@ -134,8 +153,13 @@ ecumenical_council.0102 = {
             base = 40
         }
         name = ecumenical_council.0102.a
-		faith:universal_church = { remove_doctrine = doctrine_divorce_approval }
-        faith:universal_church = { add_doctrine = doctrine_divorce_disallowed }
+		show_as_tooltip = {
+			faith:universal_church = {
+				remove_doctrine = doctrine_divorce_approval
+				add_doctrine = doctrine_divorce_disallowed
+			}
+		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_divorce_disallowed years = 5 } }
         trigger_event = { id = ecumenical_council.0103 days = {7 14} }
     }
     option = {
@@ -143,7 +167,6 @@ ecumenical_council.0102 = {
             base = 60
         }
         name = ecumenical_council.0102.b
-        faith:universal_church = { add_doctrine = doctrine_divorce_approval }
         trigger_event = { id = ecumenical_council.0103 days = {7 14} }
     }
 }
@@ -154,11 +177,11 @@ ecumenical_council.0103 = {
     title = ecumenical_council.0103.t
     desc = ecumenical_council.0103.desc
     left_portrait = {
-        character = title:d_coptic_papacy.holder
+        character = scope:scoped_coptic
         animation = personality_compassionate
     }
 		right_portrait = {
-			character = title:k_papal_state.holder
+			character = scope:scoped_pope
 			animation = personality_callous
 		}
     theme = realm
@@ -168,8 +191,13 @@ ecumenical_council.0103 = {
             base = 20
         }
         name = ecumenical_council.0103.a
-		faith:universal_church = { remove_doctrine = doctrine_bastardry_legitimization }
-        faith:universal_church = { add_doctrine = doctrine_bastardry_none }
+		show_as_tooltip = {
+			faith:universal_church = {
+				remove_doctrine = doctrine_bastardry_legitimization
+				add_doctrine = doctrine_bastardry_none
+			}
+		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_bastardry_none years = 5 } }
         trigger_event = { id = ecumenical_council.0104 days = {7 14} }
     }
     option = {
@@ -177,7 +205,6 @@ ecumenical_council.0103 = {
             base = 80
         }
         name = ecumenical_council.0103.b
-        faith:universal_church = { add_doctrine = doctrine_bastardry_legitimization }
         trigger_event = { id = ecumenical_council.0104 days = {7 14} }
     }
 }
@@ -192,7 +219,7 @@ ecumenical_council.0104 = {
         animation = personality_rational
     }
 		right_portrait = {
-			character = title:k_orthodox.holder
+			character = scope:scoped_patriarch
 			animation = personality_cynical
 		}
     theme = realm
@@ -202,8 +229,13 @@ ecumenical_council.0104 = {
             base = 30
         }
         name = ecumenical_council.0104.a
-		faith:universal_church = { remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
-        faith:universal_church = { add_doctrine = doctrine_consanguinity_restricted }
+		show_as_tooltip = {
+			faith:universal_church = {
+				remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece
+				add_doctrine = doctrine_consanguinity_restricted
+			}
+		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_consanguinity_restricted years = 5 } }
         trigger_event = { id = ecumenical_council.0105 days = {7 14} }
     }
     option = {
@@ -211,8 +243,13 @@ ecumenical_council.0104 = {
             base = 35
         }
         name = ecumenical_council.0104.b
-		faith:universal_church = { remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
-        faith:universal_church = { add_doctrine = doctrine_consanguinity_cousins }
+		show_as_tooltip = {
+			faith:universal_church = {
+				remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece
+				add_doctrine = doctrine_consanguinity_cousins
+			}
+		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_consanguinity_cousins years = 5 } }
         trigger_event = { id = ecumenical_council.0105 days = {7 14} }
     }
     option = {
@@ -220,7 +257,6 @@ ecumenical_council.0104 = {
             base = 35
         }
         name = ecumenical_council.0104.c
-        faith:universal_church = { add_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece }
         trigger_event = { id = ecumenical_council.0105 days = {7 14} }
     }
 }
@@ -231,7 +267,7 @@ ecumenical_council.0105 = {
     title = ecumenical_council.0105.t
     desc = ecumenical_council.0105.desc
     left_portrait = {
-        character = title:k_papal_state.holder
+        character = scope:scoped_pope
         animation = personality_vengeful
     }
 	right_portrait = {
@@ -245,8 +281,13 @@ ecumenical_council.0105 = {
             base = 45
         }
         name = ecumenical_council.0105.a
-		faith:universal_church = { remove_doctrine = doctrine_adultery_men_shunned }
-        faith:universal_church = { add_doctrine = doctrine_adultery_men_crime }
+		show_as_tooltip = {
+			faith:universal_church = {
+				remove_doctrine = doctrine_adultery_men_shunned
+				add_doctrine = doctrine_adultery_men_crime
+			}
+		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_adultery_men_crime years = 5 } }
         trigger_event = { id = ecumenical_council.0106 days = {7 14} }
     }
     option = {
@@ -254,8 +295,13 @@ ecumenical_council.0105 = {
             base = 10
         }
         name = ecumenical_council.0105.b
-		faith:universal_church = { remove_doctrine = doctrine_adultery_women_crime }
-        faith:universal_church = { add_doctrine = doctrine_adultery_women_shunned }
+		show_as_tooltip = {
+			faith:universal_church = {
+				remove_doctrine = doctrine_adultery_women_crime
+				add_doctrine = doctrine_adultery_women_shunned
+			}
+		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_adultery_women_shunned years = 5 } }
         trigger_event = { id = ecumenical_council.0106 days = {7 14} }
     }
     option = {
@@ -273,7 +319,7 @@ ecumenical_council.0106 = {
     title = ecumenical_council.0106.t
     desc = ecumenical_council.0106.desc
     left_portrait = {
-        character = title:d_coptic_papacy.holder
+        character = scope:scoped_coptic
         animation = personality_zealous
     }
 		right_portrait = {
@@ -287,7 +333,6 @@ ecumenical_council.0106 = {
             base = 75
         }
         name = ecumenical_council.0106.a
-        faith:universal_church = { add_doctrine = doctrine_clerical_function_taxation }
         trigger_event = { id = ecumenical_council.0107 days = {7 14} }
     }
     option = {
@@ -295,8 +340,13 @@ ecumenical_council.0106 = {
             base = 25
         }
         name = ecumenical_council.0106.b
-		faith:universal_church = { remove_doctrine = doctrine_clerical_function_taxation }
-        faith:universal_church = { add_doctrine = doctrine_clerical_function_alms_and_pacification }
+		show_as_tooltip = {
+			faith:universal_church = {
+				remove_doctrine = doctrine_clerical_function_taxation
+				add_doctrine = doctrine_clerical_function_alms_and_pacification
+			}
+		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_clerical_function_alms years = 5 } }
         trigger_event = { id = ecumenical_council.0107 days = {7 14} }
     }
 }
@@ -307,11 +357,11 @@ ecumenical_council.0107 = {
     title = ecumenical_council.0107.t
     desc = ecumenical_council.0107.desc
     left_portrait = {
-        character = title:k_papal_state.holder
+        character = scope:scoped_pope
         animation = personality_rational
     }
 		right_portrait = {
-			character = title:k_papal_state.holder
+			character = scope:scoped_pope
 			animation = personality_zealous
 		}
     theme = realm
@@ -321,7 +371,6 @@ ecumenical_council.0107 = {
             base = 70
         }
         name = ecumenical_council.0107.a
-        faith:universal_church = { add_doctrine = doctrine_clerical_marriage_disallowed }
         trigger_event = { id = ecumenical_council.0108 days = {7 14} }
     }
     option = {
@@ -329,8 +378,13 @@ ecumenical_council.0107 = {
             base = 30
         }
         name = ecumenical_council.0107.b
-		faith:universal_church = { remove_doctrine = doctrine_clerical_marriage_disallowed }
-        faith:universal_church = { add_doctrine = doctrine_clerical_marriage_allowed }
+		show_as_tooltip = {
+			faith:universal_church = {
+				remove_doctrine = doctrine_clerical_marriage_disallowed
+				add_doctrine = doctrine_clerical_marriage_allowed
+			}
+		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_clerical_marriage_allowed years = 5 } }
         trigger_event = { id = ecumenical_council.0108 days = {7 14} }
     }
 }
@@ -341,11 +395,11 @@ ecumenical_council.0108 = {
 	title = ecumenical_council.0108.t
 	desc = ecumenical_council.0108.desc
 	left_portrait = {
-        character = title:k_papal_state.holder
+        character = scope:scoped_pope
         animation = personality_zealous
     }
 	right_portrait = {
-		character = title:d_coptic_papacy.holder
+		character = scope:scoped_coptic
 		animation = personality_zealous
 	}
 	theme = realm
@@ -355,9 +409,12 @@ ecumenical_council.0108 = {
 		ai_chance = {
             base = 50
         }
-		faith:universal_church = {
-			add_doctrine = tenet_mendicant_preachers
+		show_as_tooltip = {
+			faith:universal_church = {
+				add_doctrine = tenet_mendicant_preachers
+			}
 		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_tenet_mendicant_preachers years = 5 } }
 		trigger_event = {
 			id = ecumenical_council.0109
 			days = {7 14}
@@ -368,9 +425,12 @@ ecumenical_council.0108 = {
 		ai_chance = {
 			base = 50
 		}
-		faith:universal_church = {
-			add_doctrine = tenet_armed_pilgrimages
+		show_as_tooltip = {
+			faith:universal_church = {
+				add_doctrine = tenet_armed_pilgrimages
+			}
 		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_tenet_armed_pilgrimages years = 5 } }
 		trigger_event = {
 			id = ecumenical_council.0109
 			days = {7 14}
@@ -383,11 +443,11 @@ ecumenical_council.0109 = {
 	title = ecumenical_council.0109.t
 	desc = ecumenical_council.0109.desc
 	left_portrait = {
-			character = title:k_orthodox.holder
+			character = scope:scoped_patriarch
 			animation = personality_zealous
 	}
 	right_portrait = {
-		character = title:d_coptic_papacy.holder
+		character = scope:scoped_coptic
 		animation = personality_zealous
 	}
 	theme = realm
@@ -396,9 +456,12 @@ ecumenical_council.0109 = {
             base = 50
         }
         name = ecumenical_council.0109.a
-        faith:universal_church = {
-			add_doctrine = tenet_universal_catechism
+		show_as_tooltip = {
+			faith:universal_church = {
+				add_doctrine = tenet_universal_catechism
+			}
 		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_tenet_universal_catechism years = 5 } }
         trigger_event = {
 			id = ecumenical_council.0200
 			days = {7 14}
@@ -409,9 +472,12 @@ ecumenical_council.0109 = {
             base = 50
         }
         name = ecumenical_council.0109.b
-        faith:universal_church = {
-			add_doctrine = tenet_faith_triumphant
+		show_as_tooltip = {
+			faith:universal_church = {
+				add_doctrine = tenet_faith_triumphant
+			}
 		}
+		hidden_effect = { add_character_flag = { flag = gec_choice_tenet_faith_triumphant years = 5 } }
         trigger_event = {
 			id = ecumenical_council.0200
 			days = {7 14}
@@ -481,12 +547,8 @@ ecumenical_council.0200 = {
 			}
 			else = { }
 		}
+		apply_ecumenical_council_doctrine_effect = yes
 		set_character_faith = faith:universal_church
-		# the 3 heads of faith will convert and the titles will be destroyed
-		# to simulate all submitting under the banner of the council's doctrine
-		# i tagged this as alt-history so don't complain about realism lol
-		# i also figure this sorta thing doesn't work if there isn't a pope, ecumenical patriarch, and coptic head of faith
-		# but maybe that's an excuse for not bothering to handle those cases where they don't exist
 		if = {
 			limit = { exists = title:k_papal_state.holder }
 			title:k_papal_state.holder = { save_scope_as = scoped_pope }

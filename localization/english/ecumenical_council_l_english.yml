@@ -43,6 +43,10 @@
 
   ecumenical_coptic_approval:0 "[GetTitleByKey('d_coptic_papacy').GetHolder.GetTitledFirstName] must have at least #V 75#! [opinion|E] of you (#V 100#! if [GetTitleByKey('d_coptic_papacy').GetHolder.GetTitledFirstName] is [GetTrait('zealous').GetName(GetNullCharacter)])."
 
+  ecumenical_hre_approval:0 "[GetTitleByKey('e_hre').GetHolder.GetTitledFirstName] must have at least #V 75#! [opinion|E] of you while the [GetTitleByKey('e_hre').GetName] exists."
+
+  ecumenical_byzantium_approval:0 "[GetTitleByKey('e_byzantium').GetHolder.GetTitledFirstName] must have at least #V 75#! [opinion|E] of you while the [GetTitleByKey('e_byzantium').GetName] exists."
+
   ecumenical_council_rome_doctrine:0 "[GetTitleByKey('c_roma').GetName] must be held by a ruler whose faith has the [GetFaithDoctrine('special_doctrine_ecumenical_christian').GetBaseName] Doctrine."
   ecumenical_council_constantinople_doctrine:0 "[GetTitleByKey('c_byzantion').GetName] must be held by a ruler whose faith has the [GetFaithDoctrine('special_doctrine_ecumenical_christian').GetBaseName] Doctrine."
   ecumenical_council_jerusalem_doctrine:0 "[GetTitleByKey('c_jerusalem').GetName] must be held by a ruler whose faith has the [GetFaithDoctrine('special_doctrine_ecumenical_christian').GetBaseName] Doctrine."

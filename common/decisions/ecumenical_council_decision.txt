@@ -25,6 +25,7 @@
 			}
 		}
 		NOT = { has_character_flag = ecumenical_council_in_progress }
+		NOT = { has_global_variable = great_ecumenical_council_in_progress }
 		faith = { has_doctrine = special_doctrine_ecumenical_christian } #They'd never listen to an Adamite calling for this I figure.
 	}
 
@@ -80,20 +81,32 @@
         }
 
 
-		# 3–7. HRE, ERE, Papacy, Ecumenical Patriarchate, Coptic Papacy
-		title:e_hre = { is_title_created = yes }
-		title:e_hre.holder = { 
-            opinion = { 
-                target = root value >= 75 
-            }
-        }
+		# 3-7. HRE, ERE, Papacy, Ecumenical Patriarchate, Coptic Papacy
+		trigger_if = {
+			limit = { exists = title:e_hre.holder }
+			custom_description = {
+				text = ecumenical_hre_approval
+				title:e_hre.holder = {
+					opinion = {
+						target = root
+						value >= 75
+					}
+				}
+			}
+		}
 
-		title:e_byzantium = { is_title_created = yes }
-		title:e_byzantium.holder = { 
-            opinion = { 
-                target = root value >= 75 
-            }
-        }
+		trigger_if = {
+			limit = { exists = title:e_byzantium.holder }
+			custom_description = {
+				text = ecumenical_byzantium_approval
+				title:e_byzantium.holder = {
+					opinion = {
+						target = root
+						value >= 75
+					}
+				}
+			}
+		}
 
         # Catholic Head of Faith Approves
         custom_description = {
@@ -188,6 +201,11 @@
 			add_character_flag = {
 				flag = ecumenical_council_in_progress
 				years = 5
+			}
+			set_global_variable = {
+				name = great_ecumenical_council_in_progress
+				value = yes
+				days = 1825
 			}
 		}
     }
@@ -284,7 +302,7 @@ dismantle_papacy_decision = { #For Muslims and Pagans.
 				target = root.faith
 				value >= faith_hostile_level
 			}
-            exists = religious_head # dunno why this isn't a check in vanilla but we need it for the edge case
+            exists = religious_head # Edge case guard for Catholic faiths without an active head.
             this.religion != root.faith.religion # this event is clearly designed for non-Christians
 		}
 		highest_held_title_tier >= tier_kingdom #Only Kings and Emperors

@@ -56,8 +56,105 @@
 			}
 		}
 		remove_character_flag = ecumenical_council_in_progress
+		remove_global_variable = great_ecumenical_council_in_progress
+		clear_ecumenical_council_choice_flags_effect = yes
 		add_character_flag = held_ecumenical_council
 	}
 
 	set_nickname_effect = { NICKNAME = nick_the_ecumenist }
+}
+
+apply_ecumenical_council_doctrine_effect = {
+	hidden_effect = {
+		faith:universal_church = {
+			if = {
+				limit = { root = { has_character_flag = gec_choice_pluralism_fundamentalist } }
+				remove_doctrine = doctrine_pluralism_righteous
+				add_doctrine = doctrine_pluralism_fundamentalist
+			}
+			else_if = {
+				limit = { root = { has_character_flag = gec_choice_pluralism_pluralistic } }
+				remove_doctrine = doctrine_pluralism_righteous
+				add_doctrine = doctrine_pluralism_pluralistic
+			}
+			if = {
+				limit = { root = { has_character_flag = gec_choice_no_ecumenism } }
+				remove_doctrine = special_doctrine_ecumenical_christian
+			}
+			if = {
+				limit = { root = { has_character_flag = gec_choice_divorce_disallowed } }
+				remove_doctrine = doctrine_divorce_approval
+				add_doctrine = doctrine_divorce_disallowed
+			}
+			if = {
+				limit = { root = { has_character_flag = gec_choice_bastardry_none } }
+				remove_doctrine = doctrine_bastardry_legitimization
+				add_doctrine = doctrine_bastardry_none
+			}
+			if = {
+				limit = { root = { has_character_flag = gec_choice_consanguinity_restricted } }
+				remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece
+				add_doctrine = doctrine_consanguinity_restricted
+			}
+			else_if = {
+				limit = { root = { has_character_flag = gec_choice_consanguinity_cousins } }
+				remove_doctrine = doctrine_consanguinity_aunt_nephew_and_uncle_niece
+				add_doctrine = doctrine_consanguinity_cousins
+			}
+			if = {
+				limit = { root = { has_character_flag = gec_choice_adultery_men_crime } }
+				remove_doctrine = doctrine_adultery_men_shunned
+				add_doctrine = doctrine_adultery_men_crime
+			}
+			if = {
+				limit = { root = { has_character_flag = gec_choice_adultery_women_shunned } }
+				remove_doctrine = doctrine_adultery_women_crime
+				add_doctrine = doctrine_adultery_women_shunned
+			}
+			if = {
+				limit = { root = { has_character_flag = gec_choice_clerical_function_alms } }
+				remove_doctrine = doctrine_clerical_function_taxation
+				add_doctrine = doctrine_clerical_function_alms_and_pacification
+			}
+			if = {
+				limit = { root = { has_character_flag = gec_choice_clerical_marriage_allowed } }
+				remove_doctrine = doctrine_clerical_marriage_disallowed
+				add_doctrine = doctrine_clerical_marriage_allowed
+			}
+			if = {
+				limit = { root = { has_character_flag = gec_choice_tenet_mendicant_preachers } }
+				add_doctrine = tenet_mendicant_preachers
+			}
+			else_if = {
+				limit = { root = { has_character_flag = gec_choice_tenet_armed_pilgrimages } }
+				add_doctrine = tenet_armed_pilgrimages
+			}
+			if = {
+				limit = { root = { has_character_flag = gec_choice_tenet_universal_catechism } }
+				add_doctrine = tenet_universal_catechism
+			}
+			else_if = {
+				limit = { root = { has_character_flag = gec_choice_tenet_faith_triumphant } }
+				add_doctrine = tenet_faith_triumphant
+			}
+		}
+	}
+}
+
+clear_ecumenical_council_choice_flags_effect = {
+	remove_character_flag = gec_choice_pluralism_fundamentalist
+	remove_character_flag = gec_choice_pluralism_pluralistic
+	remove_character_flag = gec_choice_no_ecumenism
+	remove_character_flag = gec_choice_divorce_disallowed
+	remove_character_flag = gec_choice_bastardry_none
+	remove_character_flag = gec_choice_consanguinity_restricted
+	remove_character_flag = gec_choice_consanguinity_cousins
+	remove_character_flag = gec_choice_adultery_men_crime
+	remove_character_flag = gec_choice_adultery_women_shunned
+	remove_character_flag = gec_choice_clerical_function_alms
+	remove_character_flag = gec_choice_clerical_marriage_allowed
+	remove_character_flag = gec_choice_tenet_mendicant_preachers
+	remove_character_flag = gec_choice_tenet_armed_pilgrimages
+	remove_character_flag = gec_choice_tenet_universal_catechism
+	remove_character_flag = gec_choice_tenet_faith_triumphant
 }
