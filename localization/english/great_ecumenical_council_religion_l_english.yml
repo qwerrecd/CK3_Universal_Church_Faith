@@ -19,6 +19,7 @@
  universal_church_default:0 "Universal Church"
 
  # Council tenets
+ doctrine_great_ecumenical_council_tenet_name:0 "Council Tenet"
  tenet_universal_catechism_name:0 "Universal Catechism"
  tenet_universal_catechism_desc:0 "The truth of God is one, but men stumble in darkness without guidance. By teaching, studying, and reasoning together, the Church shall bring all souls into understanding. Sound doctrine and careful study are lights to our path."
  tenet_faith_triumphant_name:0 "Faith Triumphant"

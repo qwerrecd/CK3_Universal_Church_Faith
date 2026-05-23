@@ -10,6 +10,10 @@ tenet_universal_catechism = {
 	}
 
 	is_shown = {
+		has_doctrine = tenet_universal_catechism
+	}
+
+	can_pick = {
 		always = no
 	}
 
@@ -34,6 +38,10 @@ tenet_faith_triumphant = {
 	}
 
 	is_shown = {
+		has_doctrine = tenet_faith_triumphant
+	}
+
+	can_pick = {
 		always = no
 	}
 

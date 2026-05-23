@@ -309,7 +309,7 @@ window = {
 					{
 						fixedgridbox = {
 							name = "doctrines_grid_core_tenets"
-							datamodel = "[FaithWindow.GetGroupingHelper( 'core_tenets' ).GetGrouping]"
+							datamodel = "[FaithWindow.GetCategoryHelper( 'core_tenets' ).GetCategory]"
 							flipdirection = yes
 							addcolumn = 143
 							addrow = 210

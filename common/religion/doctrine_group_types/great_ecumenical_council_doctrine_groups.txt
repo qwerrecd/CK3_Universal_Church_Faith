@@ -5,8 +5,6 @@
 	doctrine_types = {
 		tenet_aniconism
 		tenet_alexandrian_catechism
-		tenet_universal_catechism
-		tenet_faith_triumphant
 		tenet_armed_pilgrimages
 		tenet_carnal_exaltation
 		tenet_communal_identity
@@ -78,5 +76,19 @@
 		tenet_sacred_destruction
 		tenet_preservation
 		tenet_takamin
+	}
+}
+
+doctrine_great_ecumenical_council_tenet = {
+	category = "core_tenets"
+	number_of_picks = 1
+
+	is_available_on_create = {
+		always = no
+	}
+
+	doctrine_types = {
+		tenet_universal_catechism
+		tenet_faith_triumphant
 	}
 }

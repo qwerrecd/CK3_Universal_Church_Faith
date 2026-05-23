@@ -19,6 +19,7 @@
  universal_church_default:0 "Iglesia Universal"
 
  # Dogmas del concilio
+ doctrine_great_ecumenical_council_tenet_name:0 "Dogma del concilio"
  tenet_universal_catechism_name:0 "Catecismo Universal"
  tenet_universal_catechism_desc:0 "La verdad de Dios es una, pero los hombres tropiezan en la oscuridad sin guía. Enseñando, estudiando y razonando juntos, la Iglesia llevará a todas las almas al entendimiento. La sana doctrina y el estudio cuidadoso son luces en nuestro camino."
  tenet_faith_triumphant_name:0 "Fe Triunfante"
